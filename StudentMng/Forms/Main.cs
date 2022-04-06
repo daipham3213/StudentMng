@@ -29,9 +29,9 @@ namespace StudentMng.Forms
 
         private void lstStudents_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            Student student = GetRowValue(e.RowIndex);
             if (IsAddable(e.RowIndex))
             {
+                Student student = GetRowValue(e.RowIndex);
                 using (_context = new AppDbContext())
                 {
                     _context.Students.AddOrUpdate(student);
@@ -46,7 +46,7 @@ namespace StudentMng.Forms
         {
             for (int i = 1; i < lstStudents.Rows[row].Cells.Count; i++)
             {
-                if (lstStudents[i, row].Value == null) return false;
+                if (lstStudents[i, row].Value == DBNull.Value || lstStudents[i, row].Value == null) return false;
             }
 
             return true;
@@ -66,7 +66,10 @@ namespace StudentMng.Forms
             Student student = new Student();
             try
             {
-                student.Id = Int32.Parse(lstStudents[0, row].Value?.ToString() ?? "0");
+                if (lstStudents[0, row].Value != null && lstStudents[0, row].Value != DBNull.Value)
+                {
+                    student.Id = Int32.Parse(lstStudents[0, row].Value.ToString());
+                }
                 student.Birthdate = lstStudents[2, row].Value != null
                     ? DateTime.Parse(lstStudents[2, row].Value.ToString())
                     : DateTime.Today;
