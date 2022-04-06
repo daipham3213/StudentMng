@@ -34,9 +34,9 @@ namespace StudentMng.Forms
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.pnlUC = new System.Windows.Forms.Panel();
             this.tlbSearch = new Zuby.ADGV.AdvancedDataGridViewSearchToolBar();
             this.btnAddStudent = new System.Windows.Forms.ToolStripButton();
-            this.pnlUC = new Krypton.Toolkit.KryptonPanel();
             this.lstStudents = new Zuby.ADGV.AdvancedDataGridView();
             this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colStudentId = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,20 +52,26 @@ namespace StudentMng.Forms
             this.colCurrentJob = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlMain.SuspendLayout();
             this.tlbSearch.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.pnlUC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.lstStudents)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMain
             // 
-            this.pnlMain.Controls.Add(this.tlbSearch);
             this.pnlMain.Controls.Add(this.pnlUC);
+            this.pnlMain.Controls.Add(this.tlbSearch);
             this.pnlMain.Controls.Add(this.lstStudents);
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMain.Location = new System.Drawing.Point(0, 0);
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(1262, 753);
             this.pnlMain.TabIndex = 0;
+            // 
+            // pnlUC
+            // 
+            this.pnlUC.Location = new System.Drawing.Point(338, 118);
+            this.pnlUC.Name = "pnlUC";
+            this.pnlUC.Size = new System.Drawing.Size(580, 510);
+            this.pnlUC.TabIndex = 2;
             // 
             // tlbSearch
             // 
@@ -96,13 +102,6 @@ namespace StudentMng.Forms
             this.btnAddStudent.Text = "Thêm sinh viên";
             this.btnAddStudent.ToolTipText = "Thêm sinh viên";
             this.btnAddStudent.Click += new System.EventHandler(this.btnAddStudent_Click);
-            // 
-            // pnlUC
-            // 
-            this.pnlUC.Location = new System.Drawing.Point(171, 99);
-            this.pnlUC.Name = "pnlUC";
-            this.pnlUC.Size = new System.Drawing.Size(580, 510);
-            this.pnlUC.TabIndex = 1;
             // 
             // lstStudents
             // 
@@ -241,14 +240,13 @@ namespace StudentMng.Forms
             this.pnlMain.PerformLayout();
             this.tlbSearch.ResumeLayout(false);
             this.tlbSearch.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.pnlUC)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.lstStudents)).EndInit();
             this.ResumeLayout(false);
         }
 
-        private System.Windows.Forms.ToolStripButton btnAddStudent;
+        private System.Windows.Forms.Panel pnlUC;
 
-        private Krypton.Toolkit.KryptonPanel pnlUC;
+        private System.Windows.Forms.ToolStripButton btnAddStudent;
 
         private System.Windows.Forms.DataGridViewTextBoxColumn colId;
         private System.Windows.Forms.DataGridViewTextBoxColumn colStudentId;
