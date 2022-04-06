@@ -5,8 +5,8 @@ namespace StudentMng.Forms
 {
     public partial class Login : Form
     {
-        private static String username = "admin";
-        private static String password = "admin";
+        private static string username = "admin";
+        private static string password = "admin";
         public Login()
         {
             InitializeComponent();
@@ -15,16 +15,20 @@ namespace StudentMng.Forms
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            String usr = txtUsername.Text;
-            String pwd = txtPassword.Text;
+            string usr = txtUsername.Text;
+            string pwd = txtPassword.Text;
 
-            if (usr.Equals(Login.username) && pwd.Equals(Login.password))
+            if (usr.Equals(username) && pwd.Equals(password))
             {
-                MessageBox.Show(@"Chào mừng Admin!", @"Welcome!",MessageBoxButtons.OK);
-                this.Hide();
                 var main = new Main();
                 main.Show();
+                this.Hide();
             }
+        }
+
+        private void close(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
