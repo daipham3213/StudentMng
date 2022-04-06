@@ -182,6 +182,7 @@ namespace StudentMng.Forms
             this.txtGraduationYear.StateCommon.Border.Width = 1;
             this.txtGraduationYear.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5);
             this.txtGraduationYear.TabIndex = 18;
+            this.txtGraduationYear.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGraduationYear_KeyPress);
             // 
             // kryptonLabel3
             // 
@@ -339,7 +340,7 @@ namespace StudentMng.Forms
             this.btnCancel.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int) (((byte) (254)))), ((int) (((byte) (143)))), ((int) (((byte) (143)))));
             this.btnCancel.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int) (((byte) (255)))), ((int) (((byte) (92)))), ((int) (((byte) (98)))));
             this.btnCancel.StatePressed.Back.ColorAngle = 135F;
-            this.btnCancel.StatePressed.Border.Color1 =System.Drawing.Color.FromArgb(((int) (((byte) (255)))), ((int) (((byte) (92)))), ((int) (((byte) (98)))));
+            this.btnCancel.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int) (((byte) (255)))), ((int) (((byte) (92)))), ((int) (((byte) (98)))));
             this.btnCancel.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int) (((byte) (254)))), ((int) (((byte) (143)))), ((int) (((byte) (143)))));
             this.btnCancel.StatePressed.Border.ColorAngle = 135F;
             this.btnCancel.StatePressed.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders) ((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) | Krypton.Toolkit.PaletteDrawBorders.Left) | Krypton.Toolkit.PaletteDrawBorders.Right)));

@@ -79,7 +79,18 @@ namespace StudentMng.Forms
                 return null;
             }
 
-            if (txtGraduationYear.Text.Length > 0) student.GraduationYear = Int32.Parse(txtGraduationYear.Text);
+            if (txtGraduationYear.Text.Length > 0)
+            {
+                try
+                {
+                    int value = Int32.Parse(txtGraduationYear.Text);
+                    student.GraduationYear = value;
+                }
+                catch (Exception e)
+                {
+                    ShowMessageBox(@"Sai định dạng năm");
+                }
+            }
             else
             {
                 ShowMessageBox(@"Bạn chưa nhập năm tốt nghiệp!");
@@ -121,6 +132,14 @@ namespace StudentMng.Forms
                 }
             }
 
+        }
+
+        private void txtGraduationYear_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }
