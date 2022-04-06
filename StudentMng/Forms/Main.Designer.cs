@@ -174,9 +174,6 @@ namespace StudentMng.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn colCurrentJob;
 
         private System.Windows.Forms.DataGridView lstStudents;
-
-        private System.Windows.Forms.ColumnHeader oder;
-
         private System.Windows.Forms.Panel pnlMain;
 
         #endregion
