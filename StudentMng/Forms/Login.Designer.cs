@@ -32,16 +32,16 @@ namespace StudentMng.Forms
         private void InitializeComponent()
         {
             this.labelUsername = new System.Windows.Forms.Label();
-            this.txtUsername = new Krypton.Toolkit.KryptonTextBox();
             this.labelPassword = new System.Windows.Forms.Label();
             this.txtPassword = new Krypton.Toolkit.KryptonTextBox();
             this.btnLogin = new Krypton.Toolkit.KryptonButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtUsername = new Krypton.Toolkit.KryptonTextBox();
             this.SuspendLayout();
             // 
             // labelUsername
             // 
-            this.labelUsername.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUsername.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.labelUsername.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.labelUsername.Location = new System.Drawing.Point(55, 114);
             this.labelUsername.Name = "labelUsername";
@@ -49,22 +49,10 @@ namespace StudentMng.Forms
             this.labelUsername.TabIndex = 1;
             this.labelUsername.Text = "Tên Đăng Nhập";
             // 
-            // txtUsername
-            // 
-            this.txtUsername.Location = new System.Drawing.Point(59, 140);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(319, 39);
-            this.txtUsername.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtUsername.StateCommon.Border.Rounding = 20;
-            this.txtUsername.StateCommon.Border.Width = 1;
-            this.txtUsername.TabIndex = 1;
-            // 
             // labelPassword
             // 
             this.labelPassword.BackColor = System.Drawing.Color.White;
-            this.labelPassword.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPassword.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.labelPassword.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.labelPassword.Location = new System.Drawing.Point(56, 203);
             this.labelPassword.Name = "labelPassword";
@@ -78,10 +66,8 @@ namespace StudentMng.Forms
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(319, 39);
-            this.txtPassword.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtPassword.StateCommon.Border.Rounding = 20;
+            this.txtPassword.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders) ((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) | Krypton.Toolkit.PaletteDrawBorders.Left) | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtPassword.StateCommon.Border.Rounding = 20F;
             this.txtPassword.StateCommon.Border.Width = 1;
             this.txtPassword.TabIndex = 2;
             // 
@@ -91,43 +77,37 @@ namespace StudentMng.Forms
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
             this.btnLogin.Size = new System.Drawing.Size(200, 48);
-            this.btnLogin.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.btnLogin.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.btnLogin.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int) (((byte) (6)))), ((int) (((byte) (174)))), ((int) (((byte) (244)))));
+            this.btnLogin.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int) (((byte) (8)))), ((int) (((byte) (142)))), ((int) (((byte) (254)))));
             this.btnLogin.StateCommon.Back.ColorAngle = 45F;
-            this.btnLogin.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.btnLogin.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.btnLogin.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int) (((byte) (6)))), ((int) (((byte) (174)))), ((int) (((byte) (244)))));
+            this.btnLogin.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int) (((byte) (8)))), ((int) (((byte) (142)))), ((int) (((byte) (254)))));
             this.btnLogin.StateCommon.Border.ColorAngle = 45F;
-            this.btnLogin.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnLogin.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders) ((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) | Krypton.Toolkit.PaletteDrawBorders.Left) | Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnLogin.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.btnLogin.StateCommon.Border.Rounding = 20;
+            this.btnLogin.StateCommon.Border.Rounding = 20F;
             this.btnLogin.StateCommon.Border.Width = 1;
             this.btnLogin.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.btnLogin.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.btnLogin.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
-            this.btnLogin.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.btnLogin.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btnLogin.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int) (((byte) (20)))), ((int) (((byte) (145)))), ((int) (((byte) (198)))));
+            this.btnLogin.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int) (((byte) (22)))), ((int) (((byte) (121)))), ((int) (((byte) (206)))));
             this.btnLogin.StatePressed.Back.ColorAngle = 135F;
-            this.btnLogin.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(45)))), ((int)(((byte)(198)))));
-            this.btnLogin.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.btnLogin.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int) (((byte) (20)))), ((int) (((byte) (45)))), ((int) (((byte) (198)))));
+            this.btnLogin.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int) (((byte) (22)))), ((int) (((byte) (121)))), ((int) (((byte) (206)))));
             this.btnLogin.StatePressed.Border.ColorAngle = 135F;
-            this.btnLogin.StatePressed.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnLogin.StatePressed.Border.Rounding = 20;
+            this.btnLogin.StatePressed.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders) ((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) | Krypton.Toolkit.PaletteDrawBorders.Left) | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnLogin.StatePressed.Border.Rounding = 20F;
             this.btnLogin.StatePressed.Border.Width = 1;
-            this.btnLogin.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.btnLogin.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.btnLogin.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int) (((byte) (8)))), ((int) (((byte) (142)))), ((int) (((byte) (254)))));
+            this.btnLogin.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int) (((byte) (6)))), ((int) (((byte) (174)))), ((int) (((byte) (244)))));
             this.btnLogin.StateTracking.Back.ColorAngle = 45F;
-            this.btnLogin.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.btnLogin.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.btnLogin.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int) (((byte) (6)))), ((int) (((byte) (174)))), ((int) (((byte) (244)))));
+            this.btnLogin.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int) (((byte) (8)))), ((int) (((byte) (142)))), ((int) (((byte) (254)))));
             this.btnLogin.StateTracking.Border.ColorAngle = 45F;
-            this.btnLogin.StateTracking.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnLogin.StateTracking.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders) ((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) | Krypton.Toolkit.PaletteDrawBorders.Left) | Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnLogin.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.btnLogin.StateTracking.Border.Rounding = 20;
+            this.btnLogin.StateTracking.Border.Rounding = 20F;
             this.btnLogin.StateTracking.Border.Width = 1;
             this.btnLogin.TabIndex = 8;
             this.btnLogin.Values.Text = "Đăng Nhập";
@@ -142,6 +122,16 @@ namespace StudentMng.Forms
             this.label1.TabIndex = 9;
             this.label1.Text = "X";
             this.label1.Click += new System.EventHandler(this.close);
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.Location = new System.Drawing.Point(59, 140);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(319, 39);
+            this.txtUsername.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders) ((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) | Krypton.Toolkit.PaletteDrawBorders.Left) | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtUsername.StateCommon.Border.Rounding = 20F;
+            this.txtUsername.StateCommon.Border.Width = 1;
+            this.txtUsername.TabIndex = 1;
             // 
             // Login
             // 
@@ -162,7 +152,6 @@ namespace StudentMng.Forms
             this.Text = "Đăng nhập";
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
         private System.Windows.Forms.Label labelUsername;
 

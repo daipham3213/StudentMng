@@ -14,10 +14,13 @@ namespace StudentMng.Forms
         private AppDbContext _context;
         private BindingSource _source;
 
+        private AddStudent _addStudent;
+
         public Main()
         {
             InitializeComponent();
             _context = new AppDbContext();
+            _addStudent = new AddStudent(ClosePanel);
         }
 
         private void Main_Load(object sender, EventArgs e)
@@ -42,6 +45,12 @@ namespace StudentMng.Forms
             }
         }
 
+        private bool ClosePanel()
+        {
+            pnlUC.Hide();
+            PopulateData();
+            return true;
+        }
         private bool IsAddable(int row)
         {
             for (int i = 1; i < lstStudents.Rows[row].Cells.Count; i++)
@@ -155,6 +164,17 @@ namespace StudentMng.Forms
                 }
                 _source.DataSource = EnumerableExtensions.ToDataTable(students);
             }
+        }
+
+        private void btnAddStudent_Click(object sender, EventArgs e)
+        {
+            pnlUC.Visible = true;
+            if (!pnlUC.Contains(_addStudent))
+            {
+                pnlUC.Controls.Add(_addStudent);
+                _addStudent.Dock = DockStyle.Fill;
+            }
+            _addStudent.BringToFront();
         }
     }
 }

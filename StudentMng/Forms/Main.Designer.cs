@@ -32,11 +32,15 @@ namespace StudentMng.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.tlbSearch = new Zuby.ADGV.AdvancedDataGridViewSearchToolBar();
+            this.btnAddStudent = new System.Windows.Forms.ToolStripButton();
+            this.pnlUC = new Krypton.Toolkit.KryptonPanel();
             this.lstStudents = new Zuby.ADGV.AdvancedDataGridView();
             this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colStudentId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colBirthdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colBirthdate = new Krypton.Toolkit.KryptonDataGridViewDateTimePickerColumn();
             this.colHometown = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPhoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,33 +50,75 @@ namespace StudentMng.Forms
             this.colGraduationYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colRank = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCurrentJob = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tlbSearch = new Zuby.ADGV.AdvancedDataGridViewSearchToolBar();
             this.pnlMain.SuspendLayout();
+            this.tlbSearch.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize) (this.pnlUC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.lstStudents)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMain
             // 
+            this.pnlMain.Controls.Add(this.tlbSearch);
+            this.pnlMain.Controls.Add(this.pnlUC);
             this.pnlMain.Controls.Add(this.lstStudents);
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMain.Location = new System.Drawing.Point(0, 0);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(1262, 553);
+            this.pnlMain.Size = new System.Drawing.Size(1262, 753);
             this.pnlMain.TabIndex = 0;
+            // 
+            // tlbSearch
+            // 
+            this.tlbSearch.AllowMerge = false;
+            this.tlbSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tlbSearch.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.tlbSearch.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {this.btnAddStudent});
+            this.tlbSearch.Location = new System.Drawing.Point(0, 0);
+            this.tlbSearch.MaximumSize = new System.Drawing.Size(0, 40);
+            this.tlbSearch.MinimumSize = new System.Drawing.Size(0, 40);
+            this.tlbSearch.Name = "tlbSearch";
+            this.tlbSearch.Padding = new System.Windows.Forms.Padding(5);
+            this.tlbSearch.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.tlbSearch.Size = new System.Drawing.Size(1262, 40);
+            this.tlbSearch.TabIndex = 1;
+            this.tlbSearch.Text = "Search Bar";
+            this.tlbSearch.Search += new Zuby.ADGV.AdvancedDataGridViewSearchToolBarSearchEventHandler(this.tlbSearch_Search);
+            // 
+            // btnAddStudent
+            // 
+            this.btnAddStudent.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (192)))), ((int) (((byte) (192)))), ((int) (((byte) (255)))));
+            this.btnAddStudent.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btnAddStudent.Image = ((System.Drawing.Image) (resources.GetObject("btnAddStudent.Image")));
+            this.btnAddStudent.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnAddStudent.Name = "btnAddStudent";
+            this.btnAddStudent.Overflow = System.Windows.Forms.ToolStripItemOverflow.Never;
+            this.btnAddStudent.Size = new System.Drawing.Size(124, 27);
+            this.btnAddStudent.Text = "Thêm sinh viên";
+            this.btnAddStudent.ToolTipText = "Thêm sinh viên";
+            this.btnAddStudent.Click += new System.EventHandler(this.btnAddStudent_Click);
+            // 
+            // pnlUC
+            // 
+            this.pnlUC.Location = new System.Drawing.Point(171, 99);
+            this.pnlUC.Name = "pnlUC";
+            this.pnlUC.Size = new System.Drawing.Size(580, 510);
+            this.pnlUC.TabIndex = 1;
             // 
             // lstStudents
             // 
+            this.lstStudents.AllowUserToAddRows = false;
+            this.lstStudents.AllowUserToResizeColumns = false;
             this.lstStudents.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.lstStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.lstStudents.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {this.colId, this.colStudentId, this.colBirthdate, this.colHometown, this.colAddress, this.colPhoneNumber, this.colDepartment, this.colMajors, this.colClass, this.colGraduationYear, this.colRank, this.colCurrentJob});
             this.lstStudents.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lstStudents.FilterAndSortEnabled = true;
             this.lstStudents.FilterStringChangedInvokeBeforeDatasourceUpdate = true;
-            this.lstStudents.Location = new System.Drawing.Point(0, 30);
+            this.lstStudents.Location = new System.Drawing.Point(0, 43);
             this.lstStudents.Name = "lstStudents";
             this.lstStudents.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lstStudents.RowTemplate.Height = 24;
-            this.lstStudents.Size = new System.Drawing.Size(1262, 523);
+            this.lstStudents.Size = new System.Drawing.Size(1262, 710);
             this.lstStudents.SortStringChangedInvokeBeforeDatasourceUpdate = true;
             this.lstStudents.TabIndex = 0;
             this.lstStudents.SortStringChanged += new System.EventHandler<Zuby.ADGV.AdvancedDataGridView.SortEventArgs>(this.lstStudents_SortStringChanged);
@@ -101,11 +147,14 @@ namespace StudentMng.Forms
             // 
             // colBirthdate
             // 
+            this.colBirthdate.Checked = false;
             this.colBirthdate.DataPropertyName = "Birthdate";
             this.colBirthdate.HeaderText = "Ngày sinh";
             this.colBirthdate.MinimumWidth = 22;
             this.colBirthdate.Name = "colBirthdate";
+            this.colBirthdate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.colBirthdate.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.colBirthdate.Width = 111;
             // 
             // colHometown
             // 
@@ -179,39 +228,31 @@ namespace StudentMng.Forms
             this.colCurrentJob.Name = "colCurrentJob";
             this.colCurrentJob.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // tlbSearch
-            // 
-            this.tlbSearch.AllowMerge = false;
-            this.tlbSearch.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.tlbSearch.Location = new System.Drawing.Point(0, 0);
-            this.tlbSearch.MaximumSize = new System.Drawing.Size(0, 27);
-            this.tlbSearch.MinimumSize = new System.Drawing.Size(0, 27);
-            this.tlbSearch.Name = "tlbSearch";
-            this.tlbSearch.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.tlbSearch.Size = new System.Drawing.Size(1262, 27);
-            this.tlbSearch.TabIndex = 1;
-            this.tlbSearch.Text = "Search Bar";
-            this.tlbSearch.Search += new Zuby.ADGV.AdvancedDataGridViewSearchToolBarSearchEventHandler(this.tlbSearch_Search);
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1262, 553);
-            this.Controls.Add(this.tlbSearch);
+            this.ClientSize = new System.Drawing.Size(1262, 753);
             this.Controls.Add(this.pnlMain);
             this.Name = "Main";
             this.Text = "Chương trình quản lý thông tin sinh viên";
             this.Load += new System.EventHandler(this.Main_Load);
             this.pnlMain.ResumeLayout(false);
+            this.pnlMain.PerformLayout();
+            this.tlbSearch.ResumeLayout(false);
+            this.tlbSearch.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize) (this.pnlUC)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.lstStudents)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
         }
+
+        private System.Windows.Forms.ToolStripButton btnAddStudent;
+
+        private Krypton.Toolkit.KryptonPanel pnlUC;
 
         private System.Windows.Forms.DataGridViewTextBoxColumn colId;
         private System.Windows.Forms.DataGridViewTextBoxColumn colStudentId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colBirthdate;
+        private Krypton.Toolkit.KryptonDataGridViewDateTimePickerColumn colBirthdate;
         private System.Windows.Forms.DataGridViewTextBoxColumn colHometown;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAddress;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPhoneNumber;
@@ -224,8 +265,6 @@ namespace StudentMng.Forms
 
         private Zuby.ADGV.AdvancedDataGridView lstStudents;
         private Zuby.ADGV.AdvancedDataGridViewSearchToolBar tlbSearch;
-
-        private System.Windows.Forms.ColumnHeader oder;
 
         private System.Windows.Forms.Panel pnlMain;
 
