@@ -21,8 +21,8 @@ namespace StudentMng.Forms
             if (usr.Equals(username) && pwd.Equals(password))
             {
                 var main = new Main();
-                main.Show();
                 this.Hide();
+                main.Show();
             }
         }
 
