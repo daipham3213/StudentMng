@@ -21,6 +21,7 @@ namespace StudentMng.Forms
             InitializeComponent();
             _context = new AppDbContext();
             _addStudent = new AddStudent(ClosePanel);
+            pnlUC.Hide();
         }
 
         private void Main_Load(object sender, EventArgs e)
@@ -168,7 +169,7 @@ namespace StudentMng.Forms
 
         private void btnAddStudent_Click(object sender, EventArgs e)
         {
-            pnlUC.Visible = true;
+            pnlUC.Show();
             if (!pnlUC.Contains(_addStudent))
             {
                 pnlUC.Controls.Add(_addStudent);
