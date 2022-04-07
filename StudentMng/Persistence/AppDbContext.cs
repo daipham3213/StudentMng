@@ -9,7 +9,7 @@ namespace StudentMng.Persistence
 
         public AppDbContext() : base("StudentDbContext")
         {
-            Database.SetInitializer<AppDbContext>(new CreateDatabaseIfNotExists<AppDbContext>());
+            Database.SetInitializer(new CreateDatabaseIfNotExists<AppDbContext>());
         }
     }
 }

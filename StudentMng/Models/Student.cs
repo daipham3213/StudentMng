@@ -8,6 +8,7 @@ namespace StudentMng.Models
         [Key]
         public int Id { get; set; }
         public string StudentId { get; set; }
+        public string Name { get; set; }
         public DateTime Birthdate { get; set; }
         public string Hometown { get; set; }
         public string Address { get; set; }

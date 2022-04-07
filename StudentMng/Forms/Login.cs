@@ -5,15 +5,15 @@ namespace StudentMng.Forms
 {
     public partial class Login : Form
     {
-        private static string username = "admin";
-        private static string password = "admin";
+        private static readonly string username = "admin";
+        private static readonly string password = "admin";
         public Login()
         {
             InitializeComponent();
         }
 
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void BtnLogin_Click(object sender, EventArgs e)
         {
             string usr = txtUsername.Text;
             string pwd = txtPassword.Text;
@@ -26,7 +26,7 @@ namespace StudentMng.Forms
             }
         }
 
-        private void close(object sender, EventArgs e)
+        private void Close(object sender, EventArgs e)
         {
             this.Close();
         }

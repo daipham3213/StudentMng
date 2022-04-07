@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Data.Entity.Migrations;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using StudentMng.Models;
 using StudentMng.Persistence;
-using Zuby.ADGV;
 
 namespace StudentMng.Forms
 {
@@ -14,7 +14,7 @@ namespace StudentMng.Forms
         private AppDbContext _context;
         private BindingSource _source;
 
-        private AddStudent _addStudent;
+        private readonly AddStudent _addStudent;
 
         public Main()
         {
@@ -27,22 +27,43 @@ namespace StudentMng.Forms
         private void Main_Load(object sender, EventArgs e)
         {
             _source = new BindingSource();
-            lstStudents.DataSource = _source;
+            dataGridViewStudents.DataSource = _source;
             PopulateData();
         }
 
-        private void lstStudents_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        private void LstStudents_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            if (IsAddable(e.RowIndex))
+            var isAddable = IsAddable(e.RowIndex, e.ColumnIndex);
+            if (string.IsNullOrEmpty(isAddable))
             {
-                Student student = GetRowValue(e.RowIndex);
+                var id = int.Parse(dataGridViewStudents[e.ColumnIndex, e.RowIndex].OwningRow.Cells["Id"].Value.ToString());
+                var dataPropertyName = dataGridViewStudents[e.ColumnIndex, e.RowIndex].OwningColumn.DataPropertyName;
+                var value = dataGridViewStudents[e.ColumnIndex, e.RowIndex].Value.ToString();
+
                 using (_context = new AppDbContext())
                 {
+                    Student student = _context.Students.FirstOrDefault(s => s.Id == id);
+                    foreach (var prop in student.GetType().GetProperties())
+                    {
+                        if (prop.Name == dataPropertyName)
+                        {
+                            student
+                                .GetType()
+                                .GetProperty(dataPropertyName)
+                                .SetValue(student, Convert.ChangeType(value, prop.PropertyType), null);
+                        }
+                    }
+
                     _context.Students.AddOrUpdate(student);
                     _context.SaveChanges();
                 }
 
                 PopulateData();
+            }
+            else
+            {
+                MessageBox.Show(isAddable, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                dataGridViewStudents[e.ColumnIndex, e.RowIndex].Value = dataGridViewStudents.Tag;
             }
         }
 
@@ -52,14 +73,30 @@ namespace StudentMng.Forms
             PopulateData();
             return true;
         }
-        private bool IsAddable(int row)
+        private string IsAddable(int row, int col)
         {
-            for (int i = 1; i < lstStudents.Rows[row].Cells.Count; i++)
+            var value = dataGridViewStudents[col, row].Value.ToString();
+            if (string.IsNullOrEmpty(value))
+                return "Không được để trống ô";
+
+            if (dataGridViewStudents.Columns[col].DataPropertyName == "PhoneNumber")
             {
-                if (lstStudents[i, row].Value == DBNull.Value || lstStudents[i, row].Value == null) return false;
+                string regex = "^(0)(3[2-9]|5[6|8|9]|7[0|6-9]|8[0-6|8|9]|9[0-4|6-9])[0-9]{7}$";
+                if (!Regex.IsMatch(value, regex))
+                    return "Định dạng số điện thoại không đúng";
             }
 
-            return true;
+            if (dataGridViewStudents.Columns[col].DataPropertyName == "StudentId")
+            {
+                using (_context = new AppDbContext())
+                {
+                    var id = int.Parse(value);
+                    if (_context.Students.Any(s => s.StudentId == value))
+                        return "Mã số sinh viên đã tồn tại";
+                }
+            }
+
+            return "";
         }
 
         private void PopulateData()
@@ -71,84 +108,47 @@ namespace StudentMng.Forms
             }
         }
 
-        private Student GetRowValue(int row)
+        private void LstStudents_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
         {
-            Student student = new Student();
-            try
-            {
-                if (lstStudents[0, row].Value != null && lstStudents[0, row].Value != DBNull.Value)
-                {
-                    student.Id = Int32.Parse(lstStudents[0, row].Value.ToString());
-                }
-                student.Birthdate = lstStudents[2, row].Value != null
-                    ? DateTime.Parse(lstStudents[2, row].Value.ToString())
-                    : DateTime.Today;
-                student.StudentId = lstStudents[1, row].Value?.ToString();
-                student.Hometown = lstStudents[3, row].Value?.ToString();
-                student.Address = lstStudents[4, row].Value?.ToString();
-                student.PhoneNumber = lstStudents[5, row].Value?.ToString();
-                student.Department = lstStudents[6, row].Value?.ToString();
-                student.Majors = lstStudents[7, row].Value?.ToString();
-                student.Class = lstStudents[8, row].Value?.ToString();
-                student.GraduationYear = lstStudents[9, row].Value != null
-                    ? Int32.Parse(lstStudents[9, row].Value.ToString())
-                    : DateTime.Today.Year;
-                student.Rank = lstStudents[10, row].Value?.ToString();
-                student.CurrentJob = lstStudents[11, row].Value?.ToString();
-            }
-            catch (Exception e)
-            {
-                System.Console.WriteLine(e.Message);
-            }
-
-            return student;
-        }
-
-        private void lstStudents_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
-        {
-            DialogResult confirmResult = MessageBox.Show(@"Are you sure to delete this item?", @"Confirm Delete!!",
+            DialogResult confirmResult = MessageBox.Show("Bạn có muốn xoá sinh viên này không?", "Có",
                 MessageBoxButtons.YesNo);
 
             if (confirmResult == DialogResult.Yes)
             {
                 using (_context = new AppDbContext())
                 {
-                    int id = Int32.Parse(lstStudents[0, e.Row.Index].Value.ToString());
+                    int id = int.Parse(dataGridViewStudents[0, e.Row.Index].Value.ToString());
                     Student student = _context.Students.FirstOrDefault(p => p.Id == id);
                     if (student != null) _context.Students.Remove(student);
                     _context.SaveChanges();
                 }
             }
         }
-
-        private void lstStudents_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        private void BtnAddStudent_Click(object sender, EventArgs e)
         {
-            switch (e.ColumnIndex)
+            pnlUC.Show();
+            if (!pnlUC.Contains(_addStudent))
             {
-                case 2:
-                    MessageBox.Show(@"Sai định dạng ngày tháng năm", @"Lỗi", MessageBoxButtons.OK,
-                        MessageBoxIcon.Warning);
-                    break;
-                case 9:
-                    MessageBox.Show(@"Sai định dạng năm", @"Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    break;
+                pnlUC.Controls.Add(_addStudent);
+                _addStudent.Dock = DockStyle.Fill;
             }
+            _addStudent.BringToFront();
         }
 
-        private void lstStudents_FilterStringChanged(object sender, AdvancedDataGridView.FilterEventArgs e)
+        private void TxtSearch_TextChanged(object sender, EventArgs e)
         {
-            _source.Filter = e.FilterString;
+            txtSearchTimer.Stop();
+            txtSearchTimer.Start();
         }
 
-        private void lstStudents_SortStringChanged(object sender, AdvancedDataGridView.SortEventArgs e)
+        private void LabelClose_Click(object sender, EventArgs e)
         {
-            _source.Sort = e.SortString;
+            Application.Exit();
         }
 
-        private void tlbSearch_Search(object sender, AdvancedDataGridViewSearchToolBarSearchEventArgs e)
+        private void TxtSearchTimer_Tick(object sender, EventArgs e)
         {
-            String value = e.ValueToSearch;
-            
+            string value = txtSearch.Text;
             using (_context = new AppDbContext())
             {
                 List<Student> students;
@@ -165,17 +165,30 @@ namespace StudentMng.Forms
                 }
                 _source.DataSource = EnumerableExtensions.ToDataTable(students);
             }
+            txtSearchTimer.Stop();
         }
 
-        private void btnAddStudent_Click(object sender, EventArgs e)
+        private void DataGridViewStudents_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
         {
-            pnlUC.Show();
-            if (!pnlUC.Contains(_addStudent))
+            e.Control.KeyPress -= new KeyPressEventHandler(Custom_KeyPress);
+            var dataPropertyName = dataGridViewStudents.CurrentCell.OwningColumn.DataPropertyName;
+            if (dataPropertyName == "PhoneNumber" ||  dataPropertyName == "GraduationYear")
             {
-                pnlUC.Controls.Add(_addStudent);
-                _addStudent.Dock = DockStyle.Fill;
+                e.Control.KeyPress += new KeyPressEventHandler(Custom_KeyPress);
             }
-            _addStudent.BringToFront();
+        }
+
+        private void Custom_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void DataGridViewStudents_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
+        {
+            dataGridViewStudents.Tag = dataGridViewStudents.CurrentCell.Value;
         }
     }
 }

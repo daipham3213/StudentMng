@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using StudentMng.Models;
 using StudentMng.Persistence;
@@ -7,7 +10,7 @@ namespace StudentMng.Forms
 {
     public partial class AddStudent : UserControl
     {
-        private Func<bool> onClose;
+        private readonly Func<bool> onClose;
 
         public AddStudent(Func<bool> onClose)
         {
@@ -15,7 +18,7 @@ namespace StudentMng.Forms
             this.onClose = onClose;
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void BtnCancel_Click(object sender, EventArgs e)
         {
             onClose();
         }
@@ -23,103 +26,104 @@ namespace StudentMng.Forms
         private Student FormValidate()
         {
             Student student = new Student();
-            if (txtMSSV.Text.Length > 0) student.StudentId = txtMSSV.Text;
+            var errors = new List<string>();
+
+            if (txtMSSV.Text.Length <= 0)
+            {
+                errors.Add("Bạn chưa nhập mã số sinh viên!");
+            }
             else
             {
-                ShowMessageBox(@"Bạn chưa nhập mã số sinh viên!");
-                return null;
+                if (!IsValidStudentId(txtMSSV.Text))
+                    errors.Add("Mã số sinh viên đã tồn tại!");
             }
 
-            if (dtBirthdate.Value != DateTime.MinValue) student.Birthdate = dtBirthdate.Value;
+            if (txtName.Text.Length <= 0)
+            {
+                errors.Add("Bạn chưa nhập tên sinh viên!");
+            }
+
+            if (dtBirthdate.Value == DateTime.MinValue)
+            {
+                errors.Add("Bạn chưa nhập ngày sinh!");
+            }
+
+            if (txtHometown.Text.Length <= 0)
+            {
+                errors.Add("Bạn chưa nhập quê quán!");
+            }
+
+            if (txtAddress.Text.Length <= 0)
+            {
+                errors.Add("Bạn chưa nhập địa chỉ!");
+            }
+
+            if (txtPhoneNumber.Text.Length <= 0)
+            {
+                errors.Add("Bạn chưa nhập số điện thoại!");
+            }
             else
             {
-                ShowMessageBox(@"Bạn chưa nhập ngày sinh");
-                return null;
-            }
-
-            if (txtHometown.Text.Length > 0) student.Hometown = txtHometown.Text;
-            else
-            {
-                ShowMessageBox(@"Bạn chưa nhập quê quán!");
-                return null;
-            }
-
-            if (txtAddress.Text.Length > 0) student.Address = txtAddress.Text;
-            else
-            {
-                ShowMessageBox(@"Bạn chưa nhập đia chỉ!");
-                return null;
-            }
-
-            if (txtPhoneNumber.Text.Length > 0) student.PhoneNumber = txtPhoneNumber.Text;
-            else
-            {
-                ShowMessageBox(@"Bạn chưa nhập số điện thoại!");
-                return null;
-            }
-
-            if (txtDepartment.Text.Length > 0) student.Department = txtDepartment.Text;
-            else
-            {
-                ShowMessageBox(@"Bạn chưa nhập khoa/viện!");
-                return null;
-            }
-
-            if (txtMajors.Text.Length > 0) student.Majors = txtMajors.Text;
-            else
-            {
-                ShowMessageBox(@"Bạn chưa nhập chuyên ngành!");
-                return null;
-            }
-
-            if (txtClass.Text.Length > 0) student.Class = txtClass.Text;
-            else
-            {
-                ShowMessageBox(@"Bạn chưa nhập lớp!");
-                return null;
-            }
-
-            if (txtGraduationYear.Text.Length > 0)
-            {
-                try
+                string regex = "^(0)(3[2-9]|5[6|8|9]|7[0|6-9]|8[0-6|8|9]|9[0-4|6-9])[0-9]{7}$";
+                if (!Regex.IsMatch(txtPhoneNumber.Text, regex))
                 {
-                    int value = Int32.Parse(txtGraduationYear.Text);
-                    student.GraduationYear = value;
-                }
-                catch (Exception e)
-                {
-                    ShowMessageBox(@"Sai định dạng năm");
+                    errors.Add("Định dạng số điện thoại không đúng!");
                 }
             }
-            else
+
+            if (txtDepartment.Text.Length <= 0)
             {
-                ShowMessageBox(@"Bạn chưa nhập năm tốt nghiệp!");
+                errors.Add("Bạn chưa nhập khoa/viện!");
+            }
+
+            if (txtMajors.Text.Length <= 0)
+            {
+                errors.Add("Bạn chưa nhập chuyên ngành!");
+            }
+
+            if (txtClass.Text.Length <= 0)
+            {
+                errors.Add("Bạn chưa nhập lớp!");
+            }
+
+            if (txtGraduationYear.Text.Length <= 0)
+            {
+                errors.Add("Bạn chưa nhập năm tốt nghiệp!");
+            }
+
+            if (cbbRank.Text.Length <= 0)
+            {
+                errors.Add("Bạn chưa chọn hạng!");
+            }
+
+            if (txtCurrentJob.Text.Length <= 0)
+            {
+                errors.Add("Bạn chưa nhập công việc hiện tại!");
+            }
+
+            if (errors.Count > 0)
+            {
+                MessageBox.Show(string.Join(Environment.NewLine, errors.ToArray()), @"Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return null;
             }
 
-            if (txtRank.Text.Length > 0) student.Rank = txtRank.Text;
-            else
-            {
-                ShowMessageBox(@"Bạn chưa nhập hạng!");
-                return null;
-            }
-
-            if (txtCurrentJob.Text.Length > 0) student.CurrentJob = txtCurrentJob.Text;
-            else
-            {
-                ShowMessageBox(@"Bạn chưa nhập công việc hiện tại!");
-                return null;
-            }
+            student.StudentId = txtMSSV.Text;
+            student.Name = txtName.Text;
+            student.Hometown = txtHometown.Text;
+            student.Birthdate = dtBirthdate.Value;
+            student.Address = txtAddress.Text;
+            student.PhoneNumber = txtPhoneNumber.Text;
+            student.Department = txtDepartment.Text;
+            student.Majors = txtMajors.Text;
+            student.Class = txtClass.Text;
+            student.GraduationYear = int.Parse(txtGraduationYear.Text);
+            student.Rank = cbbRank.Text;
+            student.CurrentJob = txtCurrentJob.Text;
 
             return student;
         }
 
-        private void ShowMessageBox(String message)
-        {
-            MessageBox.Show(message, @"Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        }
-
-        private void btnCreate_Click(object sender, EventArgs e)
+        private void BtnCreate_Click(object sender, EventArgs e)
         {
             using (var context = new AppDbContext())
             {
@@ -134,12 +138,36 @@ namespace StudentMng.Forms
 
         }
 
-        private void txtGraduationYear_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtGraduationYear_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
+        }
+
+        private void TxtPhoneNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void LabelClose_Click(object sender, EventArgs e)
+        {
+            onClose();
+        }
+
+        private bool IsValidStudentId(string id)
+        {
+            using (var _context = new AppDbContext())
+            {
+                if (_context.Students.Any(s => s.StudentId == id))
+                    return false;
+            }
+
+            return true;
         }
     }
 }
