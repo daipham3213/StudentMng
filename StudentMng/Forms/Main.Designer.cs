@@ -46,13 +46,13 @@ namespace StudentMng.Forms
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.labelTitle = new System.Windows.Forms.Label();
             this.labelClose = new System.Windows.Forms.Label();
             this.btnAddStudent = new Krypton.Toolkit.KryptonButton();
             this.txtSearch = new Krypton.Toolkit.KryptonTextBox();
             this.pnlUC = new System.Windows.Forms.Panel();
             this.dataLstViewPanel = new System.Windows.Forms.Panel();
             this.dataGridViewStudents = new Krypton.Toolkit.KryptonDataGridView();
-            this.txtSearchTimer = new System.Windows.Forms.Timer(this.components);
             this.Id = new Krypton.Toolkit.KryptonDataGridViewTextBoxColumn();
             this.StudentId = new Krypton.Toolkit.KryptonDataGridViewTextBoxColumn();
             this.kryptonDataGridViewTextBoxColumn1 = new Krypton.Toolkit.KryptonDataGridViewTextBoxColumn();
@@ -66,7 +66,7 @@ namespace StudentMng.Forms
             this.GraduationYear = new Krypton.Toolkit.KryptonDataGridViewTextBoxColumn();
             this.Rank = new Krypton.Toolkit.KryptonDataGridViewTextBoxColumn();
             this.CurrentJob = new Krypton.Toolkit.KryptonDataGridViewTextBoxColumn();
-            this.labelTitle = new System.Windows.Forms.Label();
+            this.txtSearchTimer = new System.Windows.Forms.Timer(this.components);
             this.pnlMain.SuspendLayout();
             this.dataLstViewPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudents)).BeginInit();
@@ -87,6 +87,16 @@ namespace StudentMng.Forms
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(1400, 800);
             this.pnlMain.TabIndex = 0;
+            // 
+            // labelTitle
+            // 
+            this.labelTitle.AutoSize = true;
+            this.labelTitle.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitle.Location = new System.Drawing.Point(17, 29);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(212, 32);
+            this.labelTitle.TabIndex = 11;
+            this.labelTitle.Text = "Quản lý sinh viên";
             // 
             // labelClose
             // 
@@ -253,12 +263,7 @@ namespace StudentMng.Forms
             this.dataGridViewStudents.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.DataGridViewStudents_CellBeginEdit);
             this.dataGridViewStudents.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.LstStudents_CellEndEdit);
             this.dataGridViewStudents.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.DataGridViewStudents_EditingControlShowing);
-            this.dataGridViewStudents.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.LstStudents_UserDeletingRow);
-            // 
-            // txtSearchTimer
-            // 
-            this.txtSearchTimer.Interval = 500;
-            this.txtSearchTimer.Tick += new System.EventHandler(this.TxtSearchTimer_Tick);
+            this.dataGridViewStudents.KeyDown += new System.Windows.Forms.KeyEventHandler(this.DataGridViewStudents_KeyDown);
             // 
             // Id
             // 
@@ -398,15 +403,10 @@ namespace StudentMng.Forms
             this.CurrentJob.Name = "CurrentJob";
             this.CurrentJob.Width = 150;
             // 
-            // labelTitle
+            // txtSearchTimer
             // 
-            this.labelTitle.AutoSize = true;
-            this.labelTitle.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitle.Location = new System.Drawing.Point(17, 29);
-            this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(212, 32);
-            this.labelTitle.TabIndex = 11;
-            this.labelTitle.Text = "Quản lý sinh viên";
+            this.txtSearchTimer.Interval = 500;
+            this.txtSearchTimer.Tick += new System.EventHandler(this.TxtSearchTimer_Tick);
             // 
             // Main
             // 

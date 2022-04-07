@@ -108,22 +108,6 @@ namespace StudentMng.Forms
             }
         }
 
-        private void LstStudents_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
-        {
-            DialogResult confirmResult = MessageBox.Show("Bạn có muốn xoá sinh viên này không?", "Có",
-                MessageBoxButtons.YesNo);
-
-            if (confirmResult == DialogResult.Yes)
-            {
-                using (_context = new AppDbContext())
-                {
-                    int id = int.Parse(dataGridViewStudents[0, e.Row.Index].Value.ToString());
-                    Student student = _context.Students.FirstOrDefault(p => p.Id == id);
-                    if (student != null) _context.Students.Remove(student);
-                    _context.SaveChanges();
-                }
-            }
-        }
         private void BtnAddStudent_Click(object sender, EventArgs e)
         {
             pnlUC.Show();
@@ -189,6 +173,30 @@ namespace StudentMng.Forms
         private void DataGridViewStudents_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
         {
             dataGridViewStudents.Tag = dataGridViewStudents.CurrentCell.Value;
+        }
+
+        private void DataGridViewStudents_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                var currentRow = dataGridViewStudents.CurrentRow;
+
+                DialogResult confirmResult = MessageBox.Show("Bạn có muốn xoá sinh viên này không?", "Xoá sinh viên",
+                MessageBoxButtons.YesNo);
+
+                if (confirmResult == DialogResult.Yes)
+                {
+                    using (_context = new AppDbContext())
+                    {
+                        int id = int.Parse(currentRow.Cells[0].Value.ToString());
+                        Student student = _context.Students.FirstOrDefault(p => p.Id == id);
+                        if (student != null) _context.Students.Remove(student);
+                        _context.SaveChanges();
+                    }
+
+                    PopulateData();
+                }
+            }
         }
     }
 }
