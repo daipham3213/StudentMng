@@ -1,6 +1,4 @@
-﻿using System.ComponentModel;
-using Zuby.ADGV;
-
+﻿
 namespace StudentMng.Forms
 {
     partial class Main
@@ -8,7 +6,7 @@ namespace StudentMng.Forms
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private IContainer components = null;
+        private System.ComponentModel.IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -20,7 +18,6 @@ namespace StudentMng.Forms
             {
                 components.Dispose();
             }
-
             base.Dispose(disposing);
         }
 
@@ -32,203 +29,422 @@ namespace StudentMng.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnlMain = new System.Windows.Forms.Panel();
-            this.lstStudents = new Zuby.ADGV.AdvancedDataGridView();
-            this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colStudentId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colBirthdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colHometown = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPhoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDepartment = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMajors = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colClass = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colGraduationYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colRank = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCurrentJob = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tlbSearch = new Zuby.ADGV.AdvancedDataGridViewSearchToolBar();
-            this.pnlMain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.lstStudents)).BeginInit();
+            this.pnlUC = new System.Windows.Forms.Panel();
+            this.labelClose = new System.Windows.Forms.Label();
+            this.btnStudentList = new Krypton.Toolkit.KryptonButton();
+            this.btnHome = new Krypton.Toolkit.KryptonButton();
+            this.btnStatistic = new Krypton.Toolkit.KryptonButton();
+            this.btnAccount = new Krypton.Toolkit.KryptonButton();
+            this.btnLogout = new Krypton.Toolkit.KryptonButton();
             this.SuspendLayout();
             // 
-            // pnlMain
+            // pnlUC
             // 
-            this.pnlMain.Controls.Add(this.lstStudents);
-            this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMain.Location = new System.Drawing.Point(0, 0);
-            this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(1262, 553);
-            this.pnlMain.TabIndex = 0;
+            this.pnlUC.BackColor = System.Drawing.Color.White;
+            this.pnlUC.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlUC.Location = new System.Drawing.Point(0, 100);
+            this.pnlUC.Name = "pnlUC";
+            this.pnlUC.Size = new System.Drawing.Size(1400, 600);
+            this.pnlUC.TabIndex = 1;
             // 
-            // lstStudents
+            // labelClose
             // 
-            this.lstStudents.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.lstStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.lstStudents.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {this.colId, this.colStudentId, this.colBirthdate, this.colHometown, this.colAddress, this.colPhoneNumber, this.colDepartment, this.colMajors, this.colClass, this.colGraduationYear, this.colRank, this.colCurrentJob});
-            this.lstStudents.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lstStudents.FilterAndSortEnabled = true;
-            this.lstStudents.FilterStringChangedInvokeBeforeDatasourceUpdate = true;
-            this.lstStudents.Location = new System.Drawing.Point(0, 30);
-            this.lstStudents.Name = "lstStudents";
-            this.lstStudents.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lstStudents.RowTemplate.Height = 24;
-            this.lstStudents.Size = new System.Drawing.Size(1262, 523);
-            this.lstStudents.SortStringChangedInvokeBeforeDatasourceUpdate = true;
-            this.lstStudents.TabIndex = 0;
-            this.lstStudents.SortStringChanged += new System.EventHandler<Zuby.ADGV.AdvancedDataGridView.SortEventArgs>(this.lstStudents_SortStringChanged);
-            this.lstStudents.FilterStringChanged += new System.EventHandler<Zuby.ADGV.AdvancedDataGridView.FilterEventArgs>(this.lstStudents_FilterStringChanged);
-            this.lstStudents.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.lstStudents_CellEndEdit);
-            this.lstStudents.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.lstStudents_DataError);
-            this.lstStudents.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.lstStudents_UserDeletingRow);
+            this.labelClose.AutoSize = true;
+            this.labelClose.Location = new System.Drawing.Point(1371, 6);
+            this.labelClose.Name = "labelClose";
+            this.labelClose.Size = new System.Drawing.Size(17, 19);
+            this.labelClose.TabIndex = 3;
+            this.labelClose.Text = "X";
+            this.labelClose.Click += new System.EventHandler(this.labelClose_Click);
             // 
-            // colId
+            // btnStudentList
             // 
-            this.colId.DataPropertyName = "Id";
-            this.colId.HeaderText = "Id";
-            this.colId.MinimumWidth = 22;
-            this.colId.Name = "colId";
-            this.colId.ReadOnly = true;
-            this.colId.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.colId.Visible = false;
+            this.btnStudentList.Location = new System.Drawing.Point(305, 33);
+            this.btnStudentList.Margin = new System.Windows.Forms.Padding(2);
+            this.btnStudentList.Name = "btnStudentList";
+            this.btnStudentList.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnStudentList.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnStudentList.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnStudentList.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnStudentList.OverrideDefault.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnStudentList.OverrideDefault.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnStudentList.OverrideDefault.Border.Rounding = 6F;
+            this.btnStudentList.OverrideDefault.Border.Width = 1;
+            this.btnStudentList.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnStudentList.OverrideDefault.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btnStudentList.OverrideFocus.Back.Color1 = System.Drawing.Color.White;
+            this.btnStudentList.OverrideFocus.Back.Color2 = System.Drawing.Color.White;
+            this.btnStudentList.OverrideFocus.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnStudentList.OverrideFocus.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnStudentList.OverrideFocus.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnStudentList.OverrideFocus.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnStudentList.OverrideFocus.Border.Rounding = 6F;
+            this.btnStudentList.OverrideFocus.Border.Width = 1;
+            this.btnStudentList.OverrideFocus.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnStudentList.OverrideFocus.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnStudentList.Size = new System.Drawing.Size(200, 32);
+            this.btnStudentList.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnStudentList.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnStudentList.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnStudentList.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnStudentList.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnStudentList.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnStudentList.StateCommon.Border.Rounding = 6F;
+            this.btnStudentList.StateCommon.Border.Width = 1;
+            this.btnStudentList.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnStudentList.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStudentList.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnStudentList.StateNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnStudentList.StateNormal.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnStudentList.StateNormal.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnStudentList.StateNormal.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnStudentList.StateNormal.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnStudentList.StateNormal.Border.Rounding = 6F;
+            this.btnStudentList.StateNormal.Border.Width = 1;
+            this.btnStudentList.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnStudentList.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnStudentList.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnStudentList.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnStudentList.StatePressed.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnStudentList.StatePressed.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnStudentList.StatePressed.Border.Rounding = 6F;
+            this.btnStudentList.StatePressed.Border.Width = 1;
+            this.btnStudentList.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnStudentList.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnStudentList.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnStudentList.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnStudentList.StateTracking.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnStudentList.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnStudentList.StateTracking.Border.Rounding = 6F;
+            this.btnStudentList.StateTracking.Border.Width = 1;
+            this.btnStudentList.TabIndex = 4;
+            this.btnStudentList.Values.Text = "Quản lý thông tin sinh viên";
+            this.btnStudentList.Click += new System.EventHandler(this.btnStudentList_Click);
             // 
-            // colStudentId
+            // btnHome
             // 
-            this.colStudentId.DataPropertyName = "StudentId";
-            this.colStudentId.HeaderText = "MSSV";
-            this.colStudentId.MinimumWidth = 22;
-            this.colStudentId.Name = "colStudentId";
-            this.colStudentId.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.btnHome.AutoSize = true;
+            this.btnHome.Location = new System.Drawing.Point(11, 33);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(2);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnHome.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnHome.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnHome.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnHome.OverrideDefault.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnHome.OverrideDefault.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnHome.OverrideDefault.Border.Rounding = 6F;
+            this.btnHome.OverrideDefault.Border.Width = 1;
+            this.btnHome.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnHome.OverrideDefault.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btnHome.OverrideFocus.Back.Color1 = System.Drawing.Color.White;
+            this.btnHome.OverrideFocus.Back.Color2 = System.Drawing.Color.White;
+            this.btnHome.OverrideFocus.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnHome.OverrideFocus.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnHome.OverrideFocus.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnHome.OverrideFocus.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnHome.OverrideFocus.Border.Rounding = 6F;
+            this.btnHome.OverrideFocus.Border.Width = 1;
+            this.btnHome.OverrideFocus.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnHome.OverrideFocus.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnHome.Size = new System.Drawing.Size(131, 32);
+            this.btnHome.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnHome.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnHome.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnHome.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnHome.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnHome.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnHome.StateCommon.Border.Rounding = 6F;
+            this.btnHome.StateCommon.Border.Width = 1;
+            this.btnHome.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnHome.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnHome.StateNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnHome.StateNormal.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnHome.StateNormal.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnHome.StateNormal.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnHome.StateNormal.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnHome.StateNormal.Border.Rounding = 6F;
+            this.btnHome.StateNormal.Border.Width = 1;
+            this.btnHome.TabIndex = 4;
+            this.btnHome.Values.Text = "Trang chủ";
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // colBirthdate
+            // btnStatistic
             // 
-            this.colBirthdate.DataPropertyName = "Birthdate";
-            this.colBirthdate.HeaderText = "Ngày sinh";
-            this.colBirthdate.MinimumWidth = 22;
-            this.colBirthdate.Name = "colBirthdate";
-            this.colBirthdate.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.btnStatistic.AutoSize = true;
+            this.btnStatistic.Location = new System.Drawing.Point(675, 33);
+            this.btnStatistic.Margin = new System.Windows.Forms.Padding(2);
+            this.btnStatistic.Name = "btnStatistic";
+            this.btnStatistic.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnStatistic.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnStatistic.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnStatistic.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnStatistic.OverrideDefault.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnStatistic.OverrideDefault.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnStatistic.OverrideDefault.Border.Rounding = 6F;
+            this.btnStatistic.OverrideDefault.Border.Width = 1;
+            this.btnStatistic.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnStatistic.OverrideDefault.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btnStatistic.OverrideFocus.Back.Color1 = System.Drawing.Color.White;
+            this.btnStatistic.OverrideFocus.Back.Color2 = System.Drawing.Color.White;
+            this.btnStatistic.OverrideFocus.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnStatistic.OverrideFocus.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnStatistic.OverrideFocus.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnStatistic.OverrideFocus.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnStatistic.OverrideFocus.Border.Rounding = 6F;
+            this.btnStatistic.OverrideFocus.Border.Width = 1;
+            this.btnStatistic.OverrideFocus.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnStatistic.OverrideFocus.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnStatistic.Size = new System.Drawing.Size(125, 32);
+            this.btnStatistic.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnStatistic.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnStatistic.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnStatistic.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnStatistic.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnStatistic.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnStatistic.StateCommon.Border.Rounding = 6F;
+            this.btnStatistic.StateCommon.Border.Width = 1;
+            this.btnStatistic.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnStatistic.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStatistic.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnStatistic.StateNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnStatistic.StateNormal.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnStatistic.StateNormal.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnStatistic.StateNormal.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnStatistic.StateNormal.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnStatistic.StateNormal.Border.Rounding = 6F;
+            this.btnStatistic.StateNormal.Border.Width = 1;
+            this.btnStatistic.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnStatistic.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnStatistic.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnStatistic.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnStatistic.StatePressed.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnStatistic.StatePressed.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnStatistic.StatePressed.Border.Rounding = 6F;
+            this.btnStatistic.StatePressed.Border.Width = 1;
+            this.btnStatistic.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnStatistic.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnStatistic.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnStatistic.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnStatistic.StateTracking.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnStatistic.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnStatistic.StateTracking.Border.Rounding = 6F;
+            this.btnStatistic.StateTracking.Border.Width = 1;
+            this.btnStatistic.TabIndex = 4;
+            this.btnStatistic.Values.Text = "Thống kê";
+            this.btnStatistic.Click += new System.EventHandler(this.btnStatistic_Click);
             // 
-            // colHometown
+            // btnAccount
             // 
-            this.colHometown.DataPropertyName = "Hometown";
-            this.colHometown.HeaderText = "Quê quáng";
-            this.colHometown.MinimumWidth = 22;
-            this.colHometown.Name = "colHometown";
-            this.colHometown.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.btnAccount.AutoSize = true;
+            this.btnAccount.Location = new System.Drawing.Point(960, 33);
+            this.btnAccount.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAccount.Name = "btnAccount";
+            this.btnAccount.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnAccount.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnAccount.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnAccount.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnAccount.OverrideDefault.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnAccount.OverrideDefault.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnAccount.OverrideDefault.Border.Rounding = 6F;
+            this.btnAccount.OverrideDefault.Border.Width = 1;
+            this.btnAccount.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnAccount.OverrideDefault.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btnAccount.OverrideFocus.Back.Color1 = System.Drawing.Color.White;
+            this.btnAccount.OverrideFocus.Back.Color2 = System.Drawing.Color.White;
+            this.btnAccount.OverrideFocus.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnAccount.OverrideFocus.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnAccount.OverrideFocus.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnAccount.OverrideFocus.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnAccount.OverrideFocus.Border.Rounding = 6F;
+            this.btnAccount.OverrideFocus.Border.Width = 1;
+            this.btnAccount.OverrideFocus.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnAccount.OverrideFocus.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnAccount.Size = new System.Drawing.Size(149, 32);
+            this.btnAccount.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnAccount.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnAccount.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnAccount.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnAccount.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnAccount.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnAccount.StateCommon.Border.Rounding = 6F;
+            this.btnAccount.StateCommon.Border.Width = 1;
+            this.btnAccount.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnAccount.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAccount.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnAccount.StateNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnAccount.StateNormal.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnAccount.StateNormal.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnAccount.StateNormal.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnAccount.StateNormal.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnAccount.StateNormal.Border.Rounding = 6F;
+            this.btnAccount.StateNormal.Border.Width = 1;
+            this.btnAccount.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnAccount.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnAccount.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnAccount.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnAccount.StatePressed.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnAccount.StatePressed.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnAccount.StatePressed.Border.Rounding = 6F;
+            this.btnAccount.StatePressed.Border.Width = 1;
+            this.btnAccount.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnAccount.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnAccount.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnAccount.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnAccount.StateTracking.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnAccount.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnAccount.StateTracking.Border.Rounding = 6F;
+            this.btnAccount.StateTracking.Border.Width = 1;
+            this.btnAccount.TabIndex = 4;
+            this.btnAccount.Values.Text = "Quản lý tài khoản";
             // 
-            // colAddress
+            // btnLogout
             // 
-            this.colAddress.DataPropertyName = "Address";
-            this.colAddress.HeaderText = "Địa chỉ";
-            this.colAddress.MinimumWidth = 22;
-            this.colAddress.Name = "colAddress";
-            this.colAddress.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // colPhoneNumber
-            // 
-            this.colPhoneNumber.DataPropertyName = "PhoneNumber";
-            this.colPhoneNumber.HeaderText = "SĐT";
-            this.colPhoneNumber.MinimumWidth = 22;
-            this.colPhoneNumber.Name = "colPhoneNumber";
-            this.colPhoneNumber.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // colDepartment
-            // 
-            this.colDepartment.DataPropertyName = "Department";
-            this.colDepartment.HeaderText = "Khoa";
-            this.colDepartment.MinimumWidth = 22;
-            this.colDepartment.Name = "colDepartment";
-            this.colDepartment.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // colMajors
-            // 
-            this.colMajors.DataPropertyName = "Majors";
-            this.colMajors.HeaderText = "Chuyên ngành";
-            this.colMajors.MinimumWidth = 22;
-            this.colMajors.Name = "colMajors";
-            this.colMajors.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // colClass
-            // 
-            this.colClass.DataPropertyName = "Class";
-            this.colClass.HeaderText = "Lớp";
-            this.colClass.MinimumWidth = 22;
-            this.colClass.Name = "colClass";
-            this.colClass.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // colGraduationYear
-            // 
-            this.colGraduationYear.DataPropertyName = "GraduationYear";
-            this.colGraduationYear.HeaderText = "Năm tốt nghiệp";
-            this.colGraduationYear.MinimumWidth = 22;
-            this.colGraduationYear.Name = "colGraduationYear";
-            this.colGraduationYear.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // colRank
-            // 
-            this.colRank.DataPropertyName = "Rank";
-            this.colRank.HeaderText = "Hạng";
-            this.colRank.MinimumWidth = 22;
-            this.colRank.Name = "colRank";
-            this.colRank.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // colCurrentJob
-            // 
-            this.colCurrentJob.DataPropertyName = "CurrentJob";
-            this.colCurrentJob.HeaderText = "Công việc hiện tại";
-            this.colCurrentJob.MinimumWidth = 22;
-            this.colCurrentJob.Name = "colCurrentJob";
-            this.colCurrentJob.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // tlbSearch
-            // 
-            this.tlbSearch.AllowMerge = false;
-            this.tlbSearch.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.tlbSearch.Location = new System.Drawing.Point(0, 0);
-            this.tlbSearch.MaximumSize = new System.Drawing.Size(0, 27);
-            this.tlbSearch.MinimumSize = new System.Drawing.Size(0, 27);
-            this.tlbSearch.Name = "tlbSearch";
-            this.tlbSearch.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.tlbSearch.Size = new System.Drawing.Size(1262, 27);
-            this.tlbSearch.TabIndex = 1;
-            this.tlbSearch.Text = "Search Bar";
-            this.tlbSearch.Search += new Zuby.ADGV.AdvancedDataGridViewSearchToolBarSearchEventHandler(this.tlbSearch_Search);
+            this.btnLogout.AutoSize = true;
+            this.btnLogout.Location = new System.Drawing.Point(1263, 33);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.OverrideDefault.Back.Color1 = System.Drawing.Color.White;
+            this.btnLogout.OverrideDefault.Back.Color2 = System.Drawing.Color.White;
+            this.btnLogout.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnLogout.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnLogout.OverrideDefault.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnLogout.OverrideDefault.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnLogout.OverrideDefault.Border.Rounding = 6F;
+            this.btnLogout.OverrideDefault.Border.Width = 1;
+            this.btnLogout.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnLogout.OverrideDefault.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnLogout.OverrideFocus.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnLogout.OverrideFocus.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnLogout.OverrideFocus.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnLogout.OverrideFocus.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnLogout.OverrideFocus.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnLogout.OverrideFocus.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnLogout.OverrideFocus.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnLogout.OverrideFocus.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btnLogout.Size = new System.Drawing.Size(97, 32);
+            this.btnLogout.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.btnLogout.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.btnLogout.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnLogout.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnLogout.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnLogout.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnLogout.StateCommon.Border.Rounding = 6F;
+            this.btnLogout.StateCommon.Border.Width = 1;
+            this.btnLogout.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnLogout.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.StateNormal.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnLogout.StateNormal.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnLogout.StateNormal.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnLogout.StateNormal.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnLogout.StateNormal.Border.Rounding = 6F;
+            this.btnLogout.StateNormal.Border.Width = 1;
+            this.btnLogout.StateNormal.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnLogout.StateNormal.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnLogout.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnLogout.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnLogout.StatePressed.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnLogout.StatePressed.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnLogout.StatePressed.Border.Rounding = 6F;
+            this.btnLogout.StatePressed.Border.Width = 1;
+            this.btnLogout.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnLogout.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnLogout.StateTracking.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnLogout.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnLogout.StateTracking.Border.Rounding = 6F;
+            this.btnLogout.StateTracking.Border.Width = 1;
+            this.btnLogout.TabIndex = 4;
+            this.btnLogout.Values.Text = "Đăng xuất";
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1262, 553);
-            this.Controls.Add(this.tlbSearch);
-            this.Controls.Add(this.pnlMain);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1400, 700);
+            this.Controls.Add(this.btnLogout);
+            this.Controls.Add(this.btnAccount);
+            this.Controls.Add(this.btnStatistic);
+            this.Controls.Add(this.btnHome);
+            this.Controls.Add(this.btnStudentList);
+            this.Controls.Add(this.labelClose);
+            this.Controls.Add(this.pnlUC);
+            this.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Main";
-            this.Text = "Chương trình quản lý thông tin sinh viên";
-            this.Load += new System.EventHandler(this.Main_Load);
-            this.pnlMain.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize) (this.lstStudents)).EndInit();
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Main";
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
-        private System.Windows.Forms.DataGridViewTextBoxColumn colId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colStudentId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colBirthdate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colHometown;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colAddress;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPhoneNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colDepartment;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colMajors;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colClass;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colGraduationYear;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colRank;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colCurrentJob;
-
-        private Zuby.ADGV.AdvancedDataGridView lstStudents;
-        private Zuby.ADGV.AdvancedDataGridViewSearchToolBar tlbSearch;
-
-        private System.Windows.Forms.ColumnHeader oder;
-
-        private System.Windows.Forms.Panel pnlMain;
-
         #endregion
+
+        private System.Windows.Forms.Panel pnlUC;
+        private System.Windows.Forms.Label labelClose;
+        private Krypton.Toolkit.KryptonButton btnStudentList;
+        private Krypton.Toolkit.KryptonButton btnHome;
+        private Krypton.Toolkit.KryptonButton btnStatistic;
+        private Krypton.Toolkit.KryptonButton btnAccount;
+        private Krypton.Toolkit.KryptonButton btnLogout;
     }
 }
