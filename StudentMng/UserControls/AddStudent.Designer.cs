@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace StudentMng.Forms
+namespace StudentMng.UserControls
 {
     partial class AddStudent
     {
