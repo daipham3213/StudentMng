@@ -1,17 +1,14 @@
-﻿using System;
-using System.Data.Entity;
-using System.Security.Cryptography;
-using System.Text;
+﻿using System.Data.Entity;
 using StudentMng.Models;
 
 namespace StudentMng.Persistence
 {
-    public class AppDbInitializer: CreateDatabaseIfNotExists<AppDbContext>
+    public class AppDbInitializer : CreateDatabaseIfNotExists<AppDbContext>
     {
         protected override void Seed(AppDbContext context)
         {
             base.Seed(context);
-            User admin = new User
+            var admin = new User
             {
                 Username = "admin",
                 FullName = "Administrator",

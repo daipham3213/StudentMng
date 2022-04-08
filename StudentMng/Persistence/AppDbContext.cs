@@ -5,12 +5,12 @@ namespace StudentMng.Persistence
 {
     public class AppDbContext : DbContext
     {
-        public DbSet<Student> Students { get; set; }
-        public DbSet<User> Users { get; set; }
-
         public AppDbContext() : base("StudentDbContext")
         {
             Database.SetInitializer(new AppDbInitializer());
         }
+
+        public DbSet<Student> Students { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }

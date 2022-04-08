@@ -1,7 +1,7 @@
-﻿using StudentMng.Persistence;
-using StudentMng.UserControls;
-using System;
+﻿using System;
 using System.Windows.Forms;
+using StudentMng.Persistence;
+using StudentMng.UserControls;
 
 namespace StudentMng.Forms
 {
