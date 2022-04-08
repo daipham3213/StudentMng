@@ -31,10 +31,10 @@ namespace StudentMng.Forms
 
         private void btnStudentList_Click(object sender, EventArgs e)
         {
+            pnlUC.Show();
             pnlUC.Controls.Clear();
             pnlUC.Controls.Add(_studentList);
-
-            pnlUC.Show();
+            _studentList.BringToFront();
         }
 
         private void labelClose_Click(object sender, EventArgs e)
@@ -44,6 +44,7 @@ namespace StudentMng.Forms
 
         private void btnStatistic_Click(object sender, EventArgs e)
         {
+            pnlUC.Show();
             pnlUC.Controls.Clear();
             pnlUC.Controls.Add(_statisic);
             _statisic.LoadData();
