@@ -83,7 +83,9 @@
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Persistence\AppDbContext.cs" />
+    <Compile Include="Persistence\AppDbInitializer.cs" />
     <Compile Include="Persistence\EnumerableExtensions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
