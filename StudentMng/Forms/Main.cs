@@ -8,6 +8,7 @@ namespace StudentMng.Forms
     public partial class Main : Form
     {
         private AppDbContext _context;
+        private readonly Home _home;
         private readonly StudentList _studentList;
         private readonly Statistic _statisic;
         private readonly AdminInfo _adminInfo;
@@ -16,6 +17,7 @@ namespace StudentMng.Forms
         {
             InitializeComponent();
             _context = new AppDbContext();
+            _home = new Home();
             _studentList = new StudentList(_context);
             _statisic = new Statistic(_context);
             _adminInfo = new AdminInfo(_context);
@@ -29,10 +31,10 @@ namespace StudentMng.Forms
 
         private void btnStudentList_Click(object sender, EventArgs e)
         {
-            pnlUC.Show();
             pnlUC.Controls.Clear();
             pnlUC.Controls.Add(_studentList);
-            _studentList.BringToFront();
+
+            pnlUC.Show();
         }
 
         private void labelClose_Click(object sender, EventArgs e)
@@ -42,10 +44,19 @@ namespace StudentMng.Forms
 
         private void btnStatistic_Click(object sender, EventArgs e)
         {
-            pnlUC.Show();
             pnlUC.Controls.Clear();
             pnlUC.Controls.Add(_statisic);
-            _studentList.BringToFront();
+            _statisic.LoadData();
+
+            pnlUC.Show();
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            pnlUC.Controls.Clear();
+            pnlUC.Controls.Add(_home);
+
+            pnlUC.Show();
         }
 
         private void btnAccount_Click(object sender, EventArgs e)

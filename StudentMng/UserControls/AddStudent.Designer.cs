@@ -388,6 +388,7 @@ namespace StudentMng.UserControls
             // cbbRank
             // 
             this.cbbRank.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.cbbRank.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbRank.DropDownWidth = 211;
             this.cbbRank.IntegralHeight = false;
             this.cbbRank.Items.AddRange(new object[] {
