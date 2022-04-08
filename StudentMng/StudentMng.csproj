@@ -70,9 +70,7 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UserControls\AddStudent.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="UserControls\AddStudent.cs" />
     <Compile Include="UserControls\AddStudent.Designer.cs">
       <DependentUpon>AddStudent.cs</DependentUpon>
     </Compile>
@@ -95,12 +93,6 @@
     <Compile Include="Persistence\EnumerableExtensions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserControls\AddStudent.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\AddStudent.Designer.cs">
-      <DependentUpon>AddStudent.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\AdminInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -143,9 +135,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UserControls\AddStudent.resx">
-      <DependentUpon>AddStudent.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\AdminInfo.resx">
       <DependentUpon>AdminInfo.cs</DependentUpon>
     </EmbeddedResource>
