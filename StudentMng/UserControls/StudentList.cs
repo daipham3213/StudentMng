@@ -18,7 +18,6 @@ namespace StudentMng.UserControls
     public partial class StudentList : UserControl
     {
         private BindingSource _source;
-
         private AppDbContext _context;
         private readonly AddStudent _addStudent;
 
@@ -47,23 +46,20 @@ namespace StudentMng.UserControls
                 var dataPropertyName = dataGridViewStudents[e.ColumnIndex, e.RowIndex].OwningColumn.DataPropertyName;
                 var value = dataGridViewStudents[e.ColumnIndex, e.RowIndex].Value.ToString();
 
-                using (_context = new AppDbContext())
+                Student student = _context.Students.FirstOrDefault(s => s.Id == id);
+                foreach (var prop in student.GetType().GetProperties())
                 {
-                    Student student = _context.Students.FirstOrDefault(s => s.Id == id);
-                    foreach (var prop in student.GetType().GetProperties())
+                    if (prop.Name == dataPropertyName)
                     {
-                        if (prop.Name == dataPropertyName)
-                        {
-                            student
-                                .GetType()
-                                .GetProperty(dataPropertyName)
-                                .SetValue(student, Convert.ChangeType(value, prop.PropertyType), null);
-                        }
+                        student
+                            .GetType()
+                            .GetProperty(dataPropertyName)
+                            .SetValue(student, Convert.ChangeType(value, prop.PropertyType), null);
                     }
-
-                    _context.Students.AddOrUpdate(student);
-                    _context.SaveChanges();
                 }
+
+                _context.Students.AddOrUpdate(student);
+                _context.SaveChanges();
 
                 PopulateData();
             }
@@ -95,12 +91,9 @@ namespace StudentMng.UserControls
 
             if (dataGridViewStudents.Columns[col].DataPropertyName == "StudentId")
             {
-                using (_context = new AppDbContext())
-                {
-                    var id = int.Parse(value);
-                    if (_context.Students.Any(s => s.StudentId == value))
-                        return "Mã số sinh viên đã tồn tại";
-                }
+                var id = int.Parse(value);
+                if (_context.Students.Any(s => s.StudentId == value))
+                    return "Mã số sinh viên đã tồn tại";
             }
 
             return "";
@@ -108,11 +101,8 @@ namespace StudentMng.UserControls
 
         private void PopulateData()
         {
-            using (_context = new AppDbContext())
-            {
-                List<Student> students = _context.Students.ToList();
-                _source.DataSource = EnumerableExtensions.ToDataTable(students);
-            }
+            List<Student> students = _context.Students.ToList();
+            _source.DataSource = EnumerableExtensions.ToDataTable(students);
         }
 
         private void BtnAddStudent_Click(object sender, EventArgs e)
@@ -139,23 +129,22 @@ namespace StudentMng.UserControls
         private void TxtSearchTimer_Tick(object sender, EventArgs e)
         {
             string value = txtSearch.Text;
-            using (_context = new AppDbContext())
+
+            List<Student> students;
+            if (value.Length == 0)
             {
-                List<Student> students;
-                if (value.Length == 0)
-                {
-                    students = _context.Students.ToList();
-                }
-                else
-                {
-                    students = _context.Students.Where(o =>
-                        o.Name.Contains(value) || o.Address.Contains(value) || o.Birthdate.ToString().Contains(value) ||
-                        o.Class.Contains(value) || o.Department.Contains(value) || o.Hometown.Contains((value)) ||
-                        o.Majors.Contains(value) || o.CurrentJob.Contains(value) || o.PhoneNumber.Contains(value) ||
-                        o.StudentId.Contains(value) || o.Rank.Contains(value) || o.GraduationYear.ToString().Contains(value)).ToList();
-                }
-                _source.DataSource = EnumerableExtensions.ToDataTable(students);
+                students = _context.Students.ToList();
             }
+            else
+            {
+                students = _context.Students.Where(o =>
+                    o.Name.Contains(value) || o.Address.Contains(value) || o.Birthdate.ToString().Contains(value) ||
+                    o.Class.Contains(value) || o.Department.Contains(value) || o.Hometown.Contains((value)) ||
+                    o.Majors.Contains(value) || o.CurrentJob.Contains(value) || o.PhoneNumber.Contains(value) ||
+                    o.StudentId.Contains(value) || o.Rank.Contains(value) || o.GraduationYear.ToString().Contains(value)).ToList();
+            }
+            _source.DataSource = EnumerableExtensions.ToDataTable(students);
+
             txtSearchTimer.Stop();
         }
 
@@ -193,13 +182,10 @@ namespace StudentMng.UserControls
 
                 if (confirmResult == DialogResult.Yes)
                 {
-                    using (_context = new AppDbContext())
-                    {
-                        int id = int.Parse(currentRow.Cells[0].Value.ToString());
-                        Student student = _context.Students.FirstOrDefault(p => p.Id == id);
-                        if (student != null) _context.Students.Remove(student);
-                        _context.SaveChanges();
-                    }
+                    int id = int.Parse(currentRow.Cells[0].Value.ToString());
+                    Student student = _context.Students.FirstOrDefault(p => p.Id == id);
+                    if (student != null) _context.Students.Remove(student);
+                    _context.SaveChanges();
 
                     PopulateData();
                 }

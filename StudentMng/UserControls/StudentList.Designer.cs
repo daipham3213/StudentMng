@@ -30,41 +30,41 @@ namespace StudentMng.UserControls
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle287 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle288 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle289 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle290 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle291 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle292 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle293 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle294 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle295 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle296 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle297 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle298 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle299 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtSearchTimer = new System.Windows.Forms.Timer(this.components);
-            this.Rank = new Krypton.Toolkit.KryptonDataGridViewComboBoxColumn();
-            this.GraduationYear = new Krypton.Toolkit.KryptonDataGridViewTextBoxColumn();
-            this.Class = new Krypton.Toolkit.KryptonDataGridViewTextBoxColumn();
-            this.Majors = new Krypton.Toolkit.KryptonDataGridViewTextBoxColumn();
-            this.Department = new Krypton.Toolkit.KryptonDataGridViewTextBoxColumn();
-            this.PhoneNumber = new Krypton.Toolkit.KryptonDataGridViewTextBoxColumn();
-            this.Address = new Krypton.Toolkit.KryptonDataGridViewTextBoxColumn();
-            this.Hometown = new Krypton.Toolkit.KryptonDataGridViewTextBoxColumn();
-            this.Birthdate = new Krypton.Toolkit.KryptonDataGridViewDateTimePickerColumn();
-            this.kryptonDataGridViewTextBoxColumn1 = new Krypton.Toolkit.KryptonDataGridViewTextBoxColumn();
-            this.StudentId = new Krypton.Toolkit.KryptonDataGridViewTextBoxColumn();
-            this.Id = new Krypton.Toolkit.KryptonDataGridViewTextBoxColumn();
             this.dataGridViewStudents = new Krypton.Toolkit.KryptonDataGridView();
-            this.CurrentJob = new Krypton.Toolkit.KryptonDataGridViewTextBoxColumn();
             this.labelTitle = new System.Windows.Forms.Label();
             this.txtSearch = new Krypton.Toolkit.KryptonTextBox();
             this.pnlUC = new System.Windows.Forms.Panel();
             this.dataLstViewPanel = new System.Windows.Forms.Panel();
             this.pnlMain = new System.Windows.Forms.Panel();
-            this.btnAddStudent = new Krypton.Toolkit.KryptonButton();
             this.topPanel = new System.Windows.Forms.Panel();
+            this.btnAddStudent = new Krypton.Toolkit.KryptonButton();
+            this.Id = new Krypton.Toolkit.KryptonDataGridViewTextBoxColumn();
+            this.StudentId = new Krypton.Toolkit.KryptonDataGridViewTextBoxColumn();
+            this.kryptonDataGridViewTextBoxColumn1 = new Krypton.Toolkit.KryptonDataGridViewTextBoxColumn();
+            this.Birthdate = new Krypton.Toolkit.KryptonDataGridViewDateTimePickerColumn();
+            this.Hometown = new Krypton.Toolkit.KryptonDataGridViewTextBoxColumn();
+            this.Address = new Krypton.Toolkit.KryptonDataGridViewTextBoxColumn();
+            this.PhoneNumber = new Krypton.Toolkit.KryptonDataGridViewTextBoxColumn();
+            this.Department = new Krypton.Toolkit.KryptonDataGridViewTextBoxColumn();
+            this.Majors = new Krypton.Toolkit.KryptonDataGridViewTextBoxColumn();
+            this.Class = new Krypton.Toolkit.KryptonDataGridViewTextBoxColumn();
+            this.GraduationYear = new Krypton.Toolkit.KryptonDataGridViewTextBoxColumn();
+            this.Rank = new Krypton.Toolkit.KryptonDataGridViewComboBoxColumn();
+            this.CurrentJob = new Krypton.Toolkit.KryptonDataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudents)).BeginInit();
             this.dataLstViewPanel.SuspendLayout();
             this.pnlMain.SuspendLayout();
@@ -75,143 +75,6 @@ namespace StudentMng.UserControls
             // 
             this.txtSearchTimer.Interval = 500;
             this.txtSearchTimer.Tick += new System.EventHandler(this.TxtSearchTimer_Tick);
-            // 
-            // Rank
-            // 
-            this.Rank.DataPropertyName = "Rank";
-            this.Rank.DataSource = null;
-            dataGridViewCellStyle287.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Rank.DefaultCellStyle = dataGridViewCellStyle287;
-            this.Rank.DropDownWidth = 121;
-            this.Rank.HeaderText = "Xếp loại";
-            this.Rank.Items.Add("Xuất sắc");
-            this.Rank.Items.Add("Giỏi");
-            this.Rank.Items.Add("Khá");
-            this.Rank.Items.Add("Trung bình");
-            this.Rank.Items.Add("Yếu");
-            this.Rank.MinimumWidth = 6;
-            this.Rank.Name = "Rank";
-            this.Rank.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Rank.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Rank.Width = 100;
-            // 
-            // GraduationYear
-            // 
-            this.GraduationYear.DataPropertyName = "GraduationYear";
-            dataGridViewCellStyle288.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.GraduationYear.DefaultCellStyle = dataGridViewCellStyle288;
-            this.GraduationYear.HeaderText = "Năm tốt nghiệp";
-            this.GraduationYear.MinimumWidth = 6;
-            this.GraduationYear.Name = "GraduationYear";
-            this.GraduationYear.Width = 150;
-            // 
-            // Class
-            // 
-            this.Class.DataPropertyName = "Class";
-            dataGridViewCellStyle289.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Class.DefaultCellStyle = dataGridViewCellStyle289;
-            this.Class.HeaderText = "Lớp";
-            this.Class.MinimumWidth = 6;
-            this.Class.Name = "Class";
-            this.Class.Width = 100;
-            // 
-            // Majors
-            // 
-            this.Majors.DataPropertyName = "Majors";
-            dataGridViewCellStyle290.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Majors.DefaultCellStyle = dataGridViewCellStyle290;
-            this.Majors.HeaderText = "Ngành";
-            this.Majors.MinimumWidth = 6;
-            this.Majors.Name = "Majors";
-            this.Majors.Width = 100;
-            // 
-            // Department
-            // 
-            this.Department.DataPropertyName = "Department";
-            dataGridViewCellStyle291.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Department.DefaultCellStyle = dataGridViewCellStyle291;
-            this.Department.HeaderText = "Khoa";
-            this.Department.MinimumWidth = 6;
-            this.Department.Name = "Department";
-            this.Department.Width = 100;
-            // 
-            // PhoneNumber
-            // 
-            this.PhoneNumber.DataPropertyName = "PhoneNumber";
-            dataGridViewCellStyle292.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.PhoneNumber.DefaultCellStyle = dataGridViewCellStyle292;
-            this.PhoneNumber.HeaderText = "SĐT";
-            this.PhoneNumber.MinimumWidth = 6;
-            this.PhoneNumber.Name = "PhoneNumber";
-            this.PhoneNumber.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.PhoneNumber.Width = 100;
-            // 
-            // Address
-            // 
-            this.Address.DataPropertyName = "Address";
-            dataGridViewCellStyle293.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Address.DefaultCellStyle = dataGridViewCellStyle293;
-            this.Address.HeaderText = "Địa chỉ";
-            this.Address.MinimumWidth = 6;
-            this.Address.Name = "Address";
-            this.Address.Width = 100;
-            // 
-            // Hometown
-            // 
-            this.Hometown.DataPropertyName = "Hometown";
-            dataGridViewCellStyle294.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Hometown.DefaultCellStyle = dataGridViewCellStyle294;
-            this.Hometown.HeaderText = "Quê quán";
-            this.Hometown.MinimumWidth = 6;
-            this.Hometown.Name = "Hometown";
-            this.Hometown.Width = 100;
-            // 
-            // Birthdate
-            // 
-            this.Birthdate.CalendarTodayDate = new System.DateTime(2022, 4, 7, 0, 0, 0, 0);
-            this.Birthdate.Checked = false;
-            this.Birthdate.DataPropertyName = "Birthdate";
-            dataGridViewCellStyle295.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Birthdate.DefaultCellStyle = dataGridViewCellStyle295;
-            this.Birthdate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.Birthdate.HeaderText = "Ngày sinh";
-            this.Birthdate.MinimumWidth = 6;
-            this.Birthdate.Name = "Birthdate";
-            this.Birthdate.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Birthdate.Width = 100;
-            // 
-            // kryptonDataGridViewTextBoxColumn1
-            // 
-            this.kryptonDataGridViewTextBoxColumn1.DataPropertyName = "Name";
-            dataGridViewCellStyle296.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.kryptonDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle296;
-            this.kryptonDataGridViewTextBoxColumn1.HeaderText = "Tên";
-            this.kryptonDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.kryptonDataGridViewTextBoxColumn1.Name = "kryptonDataGridViewTextBoxColumn1";
-            this.kryptonDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.kryptonDataGridViewTextBoxColumn1.Width = 150;
-            // 
-            // StudentId
-            // 
-            this.StudentId.DataPropertyName = "StudentId";
-            dataGridViewCellStyle297.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.StudentId.DefaultCellStyle = dataGridViewCellStyle297;
-            this.StudentId.HeaderText = "MSSV";
-            this.StudentId.MinimumWidth = 6;
-            this.StudentId.Name = "StudentId";
-            this.StudentId.Width = 100;
-            // 
-            // Id
-            // 
-            this.Id.DataPropertyName = "Id";
-            this.Id.DefaultCellStyle = dataGridViewCellStyle298;
-            this.Id.HeaderText = "Id";
-            this.Id.MinimumWidth = 6;
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Id.Visible = false;
-            this.Id.Width = 58;
             // 
             // dataGridViewStudents
             // 
@@ -255,16 +118,6 @@ namespace StudentMng.UserControls
             this.dataGridViewStudents.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.LstStudents_CellEndEdit);
             this.dataGridViewStudents.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.DataGridViewStudents_EditingControlShowing);
             this.dataGridViewStudents.KeyDown += new System.Windows.Forms.KeyEventHandler(this.DataGridViewStudents_KeyDown);
-            // 
-            // CurrentJob
-            // 
-            this.CurrentJob.DataPropertyName = "CurrentJob";
-            dataGridViewCellStyle299.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.CurrentJob.DefaultCellStyle = dataGridViewCellStyle299;
-            this.CurrentJob.HeaderText = "Công việc hiện tại";
-            this.CurrentJob.MinimumWidth = 6;
-            this.CurrentJob.Name = "CurrentJob";
-            this.CurrentJob.Width = 150;
             // 
             // labelTitle
             // 
@@ -335,6 +188,17 @@ namespace StudentMng.UserControls
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(1400, 800);
             this.pnlMain.TabIndex = 1;
+            // 
+            // topPanel
+            // 
+            this.topPanel.Controls.Add(this.txtSearch);
+            this.topPanel.Controls.Add(this.btnAddStudent);
+            this.topPanel.Controls.Add(this.labelTitle);
+            this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.topPanel.Location = new System.Drawing.Point(0, 0);
+            this.topPanel.Name = "topPanel";
+            this.topPanel.Size = new System.Drawing.Size(1400, 119);
+            this.topPanel.TabIndex = 12;
             // 
             // btnAddStudent
             // 
@@ -408,16 +272,153 @@ namespace StudentMng.UserControls
             this.btnAddStudent.Values.Text = "Thêm sinh viên";
             this.btnAddStudent.Click += new System.EventHandler(this.BtnAddStudent_Click);
             // 
-            // topPanel
+            // Id
             // 
-            this.topPanel.Controls.Add(this.txtSearch);
-            this.topPanel.Controls.Add(this.btnAddStudent);
-            this.topPanel.Controls.Add(this.labelTitle);
-            this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.topPanel.Location = new System.Drawing.Point(0, 0);
-            this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1400, 119);
-            this.topPanel.TabIndex = 12;
+            this.Id.DataPropertyName = "Id";
+            this.Id.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Id.HeaderText = "Id";
+            this.Id.MinimumWidth = 6;
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Id.Visible = false;
+            this.Id.Width = 58;
+            // 
+            // StudentId
+            // 
+            this.StudentId.DataPropertyName = "StudentId";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.StudentId.DefaultCellStyle = dataGridViewCellStyle2;
+            this.StudentId.HeaderText = "MSSV";
+            this.StudentId.MinimumWidth = 6;
+            this.StudentId.Name = "StudentId";
+            this.StudentId.Width = 100;
+            // 
+            // kryptonDataGridViewTextBoxColumn1
+            // 
+            this.kryptonDataGridViewTextBoxColumn1.DataPropertyName = "Name";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.kryptonDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle3;
+            this.kryptonDataGridViewTextBoxColumn1.HeaderText = "Họ Tên";
+            this.kryptonDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.kryptonDataGridViewTextBoxColumn1.Name = "kryptonDataGridViewTextBoxColumn1";
+            this.kryptonDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.kryptonDataGridViewTextBoxColumn1.Width = 150;
+            // 
+            // Birthdate
+            // 
+            this.Birthdate.CalendarTodayDate = new System.DateTime(2022, 4, 7, 0, 0, 0, 0);
+            this.Birthdate.Checked = false;
+            this.Birthdate.DataPropertyName = "Birthdate";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Birthdate.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Birthdate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.Birthdate.HeaderText = "Ngày sinh";
+            this.Birthdate.MinimumWidth = 6;
+            this.Birthdate.Name = "Birthdate";
+            this.Birthdate.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Birthdate.Width = 100;
+            // 
+            // Hometown
+            // 
+            this.Hometown.DataPropertyName = "Hometown";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Hometown.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Hometown.HeaderText = "Quê quán";
+            this.Hometown.MinimumWidth = 6;
+            this.Hometown.Name = "Hometown";
+            this.Hometown.Width = 100;
+            // 
+            // Address
+            // 
+            this.Address.DataPropertyName = "Address";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Address.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Address.HeaderText = "Địa chỉ";
+            this.Address.MinimumWidth = 6;
+            this.Address.Name = "Address";
+            this.Address.Width = 100;
+            // 
+            // PhoneNumber
+            // 
+            this.PhoneNumber.DataPropertyName = "PhoneNumber";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.PhoneNumber.DefaultCellStyle = dataGridViewCellStyle7;
+            this.PhoneNumber.HeaderText = "SĐT";
+            this.PhoneNumber.MinimumWidth = 6;
+            this.PhoneNumber.Name = "PhoneNumber";
+            this.PhoneNumber.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.PhoneNumber.Width = 100;
+            // 
+            // Department
+            // 
+            this.Department.DataPropertyName = "Department";
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Department.DefaultCellStyle = dataGridViewCellStyle8;
+            this.Department.HeaderText = "Khoa";
+            this.Department.MinimumWidth = 6;
+            this.Department.Name = "Department";
+            this.Department.Width = 100;
+            // 
+            // Majors
+            // 
+            this.Majors.DataPropertyName = "Majors";
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Majors.DefaultCellStyle = dataGridViewCellStyle9;
+            this.Majors.HeaderText = "Ngành";
+            this.Majors.MinimumWidth = 6;
+            this.Majors.Name = "Majors";
+            this.Majors.Width = 100;
+            // 
+            // Class
+            // 
+            this.Class.DataPropertyName = "Class";
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Class.DefaultCellStyle = dataGridViewCellStyle10;
+            this.Class.HeaderText = "Lớp";
+            this.Class.MinimumWidth = 6;
+            this.Class.Name = "Class";
+            this.Class.Width = 100;
+            // 
+            // GraduationYear
+            // 
+            this.GraduationYear.DataPropertyName = "GraduationYear";
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.GraduationYear.DefaultCellStyle = dataGridViewCellStyle11;
+            this.GraduationYear.HeaderText = "Năm tốt nghiệp";
+            this.GraduationYear.MinimumWidth = 6;
+            this.GraduationYear.Name = "GraduationYear";
+            this.GraduationYear.Width = 150;
+            // 
+            // Rank
+            // 
+            this.Rank.DataPropertyName = "Rank";
+            this.Rank.DataSource = null;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Rank.DefaultCellStyle = dataGridViewCellStyle12;
+            this.Rank.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Rank.DropDownWidth = 121;
+            this.Rank.HeaderText = "Xếp loại";
+            this.Rank.Items.Add("Xuất sắc");
+            this.Rank.Items.Add("Giỏi");
+            this.Rank.Items.Add("Khá");
+            this.Rank.Items.Add("Trung bình");
+            this.Rank.Items.Add("Yếu");
+            this.Rank.MinimumWidth = 6;
+            this.Rank.Name = "Rank";
+            this.Rank.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Rank.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Rank.Width = 100;
+            // 
+            // CurrentJob
+            // 
+            this.CurrentJob.DataPropertyName = "CurrentJob";
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.CurrentJob.DefaultCellStyle = dataGridViewCellStyle13;
+            this.CurrentJob.HeaderText = "Công việc hiện tại";
+            this.CurrentJob.MinimumWidth = 6;
+            this.CurrentJob.Name = "CurrentJob";
+            this.CurrentJob.Width = 150;
             // 
             // StudentList
             // 
@@ -439,20 +440,7 @@ namespace StudentMng.UserControls
         #endregion
 
         private System.Windows.Forms.Timer txtSearchTimer;
-        private Krypton.Toolkit.KryptonDataGridViewComboBoxColumn Rank;
-        private Krypton.Toolkit.KryptonDataGridViewTextBoxColumn GraduationYear;
-        private Krypton.Toolkit.KryptonDataGridViewTextBoxColumn Class;
-        private Krypton.Toolkit.KryptonDataGridViewTextBoxColumn Majors;
-        private Krypton.Toolkit.KryptonDataGridViewTextBoxColumn Department;
-        private Krypton.Toolkit.KryptonDataGridViewTextBoxColumn PhoneNumber;
-        private Krypton.Toolkit.KryptonDataGridViewTextBoxColumn Address;
-        private Krypton.Toolkit.KryptonDataGridViewTextBoxColumn Hometown;
-        private Krypton.Toolkit.KryptonDataGridViewDateTimePickerColumn Birthdate;
-        private Krypton.Toolkit.KryptonDataGridViewTextBoxColumn kryptonDataGridViewTextBoxColumn1;
-        private Krypton.Toolkit.KryptonDataGridViewTextBoxColumn StudentId;
-        private Krypton.Toolkit.KryptonDataGridViewTextBoxColumn Id;
         private Krypton.Toolkit.KryptonDataGridView dataGridViewStudents;
-        private Krypton.Toolkit.KryptonDataGridViewTextBoxColumn CurrentJob;
         private System.Windows.Forms.Label labelTitle;
         private Krypton.Toolkit.KryptonTextBox txtSearch;
         private System.Windows.Forms.Panel pnlUC;
@@ -460,5 +448,18 @@ namespace StudentMng.UserControls
         private System.Windows.Forms.Panel pnlMain;
         private Krypton.Toolkit.KryptonButton btnAddStudent;
         private System.Windows.Forms.Panel topPanel;
+        private Krypton.Toolkit.KryptonDataGridViewTextBoxColumn Id;
+        private Krypton.Toolkit.KryptonDataGridViewTextBoxColumn StudentId;
+        private Krypton.Toolkit.KryptonDataGridViewTextBoxColumn kryptonDataGridViewTextBoxColumn1;
+        private Krypton.Toolkit.KryptonDataGridViewDateTimePickerColumn Birthdate;
+        private Krypton.Toolkit.KryptonDataGridViewTextBoxColumn Hometown;
+        private Krypton.Toolkit.KryptonDataGridViewTextBoxColumn Address;
+        private Krypton.Toolkit.KryptonDataGridViewTextBoxColumn PhoneNumber;
+        private Krypton.Toolkit.KryptonDataGridViewTextBoxColumn Department;
+        private Krypton.Toolkit.KryptonDataGridViewTextBoxColumn Majors;
+        private Krypton.Toolkit.KryptonDataGridViewTextBoxColumn Class;
+        private Krypton.Toolkit.KryptonDataGridViewTextBoxColumn GraduationYear;
+        private Krypton.Toolkit.KryptonDataGridViewComboBoxColumn Rank;
+        private Krypton.Toolkit.KryptonDataGridViewTextBoxColumn CurrentJob;
     }
 }
