@@ -63,10 +63,10 @@ namespace StudentMng.Forms
             // 
             // lblTille
             // 
-            this.lblTille.Location = new System.Drawing.Point(11, 2);
-            this.lblTille.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lblTille.Location = new System.Drawing.Point(8, 2);
+            this.lblTille.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lblTille.Name = "lblTille";
-            this.lblTille.Size = new System.Drawing.Size(163, 40);
+            this.lblTille.Size = new System.Drawing.Size(133, 34);
             this.lblTille.StateCommon.Padding = new System.Windows.Forms.Padding(5);
             this.lblTille.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTille.TabIndex = 0;
@@ -74,20 +74,20 @@ namespace StudentMng.Forms
             // 
             // lblStudent1
             // 
-            this.lblStudent1.Location = new System.Drawing.Point(11, 60);
-            this.lblStudent1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lblStudent1.Location = new System.Drawing.Point(11, 31);
+            this.lblStudent1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lblStudent1.Name = "lblStudent1";
-            this.lblStudent1.Size = new System.Drawing.Size(55, 26);
+            this.lblStudent1.Size = new System.Drawing.Size(45, 21);
             this.lblStudent1.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStudent1.TabIndex = 1;
             this.lblStudent1.Values.Text = "MSSV";
             // 
             // txtMSSV
             // 
-            this.txtMSSV.Location = new System.Drawing.Point(11, 90);
-            this.txtMSSV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtMSSV.Location = new System.Drawing.Point(11, 55);
+            this.txtMSSV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtMSSV.Name = "txtMSSV";
-            this.txtMSSV.Size = new System.Drawing.Size(251, 32);
+            this.txtMSSV.Size = new System.Drawing.Size(188, 28);
             this.txtMSSV.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -99,20 +99,20 @@ namespace StudentMng.Forms
             // 
             // lblBirhdate
             // 
-            this.lblBirhdate.Location = new System.Drawing.Point(11, 130);
-            this.lblBirhdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lblBirhdate.Location = new System.Drawing.Point(11, 88);
+            this.lblBirhdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lblBirhdate.Name = "lblBirhdate";
-            this.lblBirhdate.Size = new System.Drawing.Size(86, 26);
+            this.lblBirhdate.Size = new System.Drawing.Size(70, 21);
             this.lblBirhdate.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBirhdate.TabIndex = 3;
             this.lblBirhdate.Values.Text = "Ngày sinh";
             // 
             // txtHometown
             // 
-            this.txtHometown.Location = new System.Drawing.Point(11, 230);
-            this.txtHometown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtHometown.Location = new System.Drawing.Point(11, 169);
+            this.txtHometown.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtHometown.Name = "txtHometown";
-            this.txtHometown.Size = new System.Drawing.Size(251, 32);
+            this.txtHometown.Size = new System.Drawing.Size(188, 28);
             this.txtHometown.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -124,20 +124,20 @@ namespace StudentMng.Forms
             // 
             // kryptonLabel1
             // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(11, 199);
-            this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kryptonLabel1.Location = new System.Drawing.Point(11, 144);
+            this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(85, 26);
+            this.kryptonLabel1.Size = new System.Drawing.Size(69, 21);
             this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel1.TabIndex = 5;
             this.kryptonLabel1.Values.Text = "Quê quán";
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(11, 300);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtAddress.Location = new System.Drawing.Point(11, 226);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(251, 32);
+            this.txtAddress.Size = new System.Drawing.Size(188, 28);
             this.txtAddress.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -149,20 +149,20 @@ namespace StudentMng.Forms
             // 
             // lblAddress
             // 
-            this.lblAddress.Location = new System.Drawing.Point(11, 270);
-            this.lblAddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lblAddress.Location = new System.Drawing.Point(11, 201);
+            this.lblAddress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(62, 26);
+            this.lblAddress.Size = new System.Drawing.Size(51, 21);
             this.lblAddress.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddress.TabIndex = 7;
             this.lblAddress.Values.Text = "Địa chỉ";
             // 
             // txtPhoneNumber
             // 
-            this.txtPhoneNumber.Location = new System.Drawing.Point(11, 370);
-            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(11, 283);
+            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(251, 32);
+            this.txtPhoneNumber.Size = new System.Drawing.Size(188, 28);
             this.txtPhoneNumber.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -175,30 +175,30 @@ namespace StudentMng.Forms
             // 
             // lblPhoneNumber
             // 
-            this.lblPhoneNumber.Location = new System.Drawing.Point(11, 340);
-            this.lblPhoneNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lblPhoneNumber.Location = new System.Drawing.Point(11, 258);
+            this.lblPhoneNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lblPhoneNumber.Name = "lblPhoneNumber";
-            this.lblPhoneNumber.Size = new System.Drawing.Size(41, 26);
+            this.lblPhoneNumber.Size = new System.Drawing.Size(34, 21);
             this.lblPhoneNumber.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPhoneNumber.TabIndex = 9;
             this.lblPhoneNumber.Values.Text = "SĐT";
             // 
             // kryptonLabel2
             // 
-            this.kryptonLabel2.Location = new System.Drawing.Point(305, 414);
-            this.kryptonLabel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kryptonLabel2.Location = new System.Drawing.Point(232, 318);
+            this.kryptonLabel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.kryptonLabel2.Name = "kryptonLabel2";
-            this.kryptonLabel2.Size = new System.Drawing.Size(71, 26);
+            this.kryptonLabel2.Size = new System.Drawing.Size(58, 21);
             this.kryptonLabel2.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel2.TabIndex = 19;
             this.kryptonLabel2.Values.Text = "Xếp loại";
             // 
             // txtGraduationYear
             // 
-            this.txtGraduationYear.Location = new System.Drawing.Point(305, 374);
-            this.txtGraduationYear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtGraduationYear.Location = new System.Drawing.Point(232, 286);
+            this.txtGraduationYear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtGraduationYear.Name = "txtGraduationYear";
-            this.txtGraduationYear.Size = new System.Drawing.Size(251, 32);
+            this.txtGraduationYear.Size = new System.Drawing.Size(188, 28);
             this.txtGraduationYear.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -211,10 +211,10 @@ namespace StudentMng.Forms
             // 
             // txtClass
             // 
-            this.txtClass.Location = new System.Drawing.Point(305, 304);
-            this.txtClass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtClass.Location = new System.Drawing.Point(232, 229);
+            this.txtClass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtClass.Name = "txtClass";
-            this.txtClass.Size = new System.Drawing.Size(251, 32);
+            this.txtClass.Size = new System.Drawing.Size(188, 28);
             this.txtClass.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -226,20 +226,20 @@ namespace StudentMng.Forms
             // 
             // kryptonLabel4
             // 
-            this.kryptonLabel4.Location = new System.Drawing.Point(305, 273);
-            this.kryptonLabel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kryptonLabel4.Location = new System.Drawing.Point(232, 204);
+            this.kryptonLabel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.kryptonLabel4.Name = "kryptonLabel4";
-            this.kryptonLabel4.Size = new System.Drawing.Size(40, 26);
+            this.kryptonLabel4.Size = new System.Drawing.Size(33, 21);
             this.kryptonLabel4.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel4.TabIndex = 15;
             this.kryptonLabel4.Values.Text = "Lớp";
             // 
             // txtMajors
             // 
-            this.txtMajors.Location = new System.Drawing.Point(305, 234);
-            this.txtMajors.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtMajors.Location = new System.Drawing.Point(232, 172);
+            this.txtMajors.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtMajors.Name = "txtMajors";
-            this.txtMajors.Size = new System.Drawing.Size(251, 32);
+            this.txtMajors.Size = new System.Drawing.Size(188, 28);
             this.txtMajors.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -251,10 +251,10 @@ namespace StudentMng.Forms
             // 
             // kryptonLabel5
             // 
-            this.kryptonLabel5.Location = new System.Drawing.Point(305, 204);
-            this.kryptonLabel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kryptonLabel5.Location = new System.Drawing.Point(232, 148);
+            this.kryptonLabel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.kryptonLabel5.Name = "kryptonLabel5";
-            this.kryptonLabel5.Size = new System.Drawing.Size(119, 26);
+            this.kryptonLabel5.Size = new System.Drawing.Size(96, 21);
             this.kryptonLabel5.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel5.TabIndex = 13;
             this.kryptonLabel5.Values.Text = "Chuyên ngành";
@@ -263,10 +263,10 @@ namespace StudentMng.Forms
             // 
             this.txtDepartment.CueHint.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDepartment.CueHint.Padding = new System.Windows.Forms.Padding(0);
-            this.txtDepartment.Location = new System.Drawing.Point(305, 164);
-            this.txtDepartment.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtDepartment.Location = new System.Drawing.Point(232, 115);
+            this.txtDepartment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDepartment.Name = "txtDepartment";
-            this.txtDepartment.Size = new System.Drawing.Size(251, 32);
+            this.txtDepartment.Size = new System.Drawing.Size(188, 28);
             this.txtDepartment.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -278,30 +278,30 @@ namespace StudentMng.Forms
             // 
             // kryptonLabel6
             // 
-            this.kryptonLabel6.Location = new System.Drawing.Point(305, 134);
-            this.kryptonLabel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kryptonLabel6.Location = new System.Drawing.Point(232, 91);
+            this.kryptonLabel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.kryptonLabel6.Name = "kryptonLabel6";
-            this.kryptonLabel6.Size = new System.Drawing.Size(89, 26);
+            this.kryptonLabel6.Size = new System.Drawing.Size(72, 21);
             this.kryptonLabel6.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel6.TabIndex = 11;
             this.kryptonLabel6.Values.Text = "Khoa/Viện";
             // 
             // kryptonLabel7
             // 
-            this.kryptonLabel7.Location = new System.Drawing.Point(305, 347);
-            this.kryptonLabel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kryptonLabel7.Location = new System.Drawing.Point(232, 264);
+            this.kryptonLabel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.kryptonLabel7.Name = "kryptonLabel7";
-            this.kryptonLabel7.Size = new System.Drawing.Size(129, 26);
+            this.kryptonLabel7.Size = new System.Drawing.Size(105, 21);
             this.kryptonLabel7.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel7.TabIndex = 23;
             this.kryptonLabel7.Values.Text = "Năm tốt nghiệp";
             // 
             // txtCurrentJob
             // 
-            this.txtCurrentJob.Location = new System.Drawing.Point(11, 441);
-            this.txtCurrentJob.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCurrentJob.Location = new System.Drawing.Point(11, 340);
+            this.txtCurrentJob.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCurrentJob.Name = "txtCurrentJob";
-            this.txtCurrentJob.Size = new System.Drawing.Size(251, 32);
+            this.txtCurrentJob.Size = new System.Drawing.Size(188, 28);
             this.txtCurrentJob.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -313,21 +313,21 @@ namespace StudentMng.Forms
             // 
             // kryptonLabel8
             // 
-            this.kryptonLabel8.Location = new System.Drawing.Point(11, 410);
-            this.kryptonLabel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kryptonLabel8.Location = new System.Drawing.Point(11, 315);
+            this.kryptonLabel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.kryptonLabel8.Name = "kryptonLabel8";
-            this.kryptonLabel8.Size = new System.Drawing.Size(144, 26);
+            this.kryptonLabel8.Size = new System.Drawing.Size(116, 21);
             this.kryptonLabel8.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel8.TabIndex = 21;
             this.kryptonLabel8.Values.Text = "Công việc hiện tại";
             // 
             // btnCreate
             // 
-            this.btnCreate.Location = new System.Drawing.Point(211, 523);
-            this.btnCreate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCreate.Location = new System.Drawing.Point(169, 386);
+            this.btnCreate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.btnCreate.Size = new System.Drawing.Size(124, 36);
+            this.btnCreate.Size = new System.Drawing.Size(93, 29);
             this.btnCreate.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.btnCreate.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.btnCreate.StateCommon.Back.ColorAngle = 45F;
@@ -373,10 +373,10 @@ namespace StudentMng.Forms
             // dtBirthdate
             // 
             this.dtBirthdate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtBirthdate.Location = new System.Drawing.Point(11, 160);
-            this.dtBirthdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtBirthdate.Location = new System.Drawing.Point(11, 112);
+            this.dtBirthdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtBirthdate.Name = "dtBirthdate";
-            this.dtBirthdate.Size = new System.Drawing.Size(251, 32);
+            this.dtBirthdate.Size = new System.Drawing.Size(188, 27);
             this.dtBirthdate.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -396,10 +396,9 @@ namespace StudentMng.Forms
             "Khá",
             "Trung bình",
             "Yếu"});
-            this.cbbRank.Location = new System.Drawing.Point(305, 444);
-            this.cbbRank.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbbRank.Location = new System.Drawing.Point(232, 343);
             this.cbbRank.Name = "cbbRank";
-            this.cbbRank.Size = new System.Drawing.Size(251, 31);
+            this.cbbRank.Size = new System.Drawing.Size(188, 27);
             this.cbbRank.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
             this.cbbRank.StateCommon.ComboBox.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
@@ -413,29 +412,30 @@ namespace StudentMng.Forms
             // labelClose
             // 
             this.labelClose.AutoSize = true;
-            this.labelClose.Location = new System.Drawing.Point(537, 12);
+            this.labelClose.Location = new System.Drawing.Point(403, 10);
+            this.labelClose.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelClose.Name = "labelClose";
-            this.labelClose.Size = new System.Drawing.Size(17, 17);
+            this.labelClose.Size = new System.Drawing.Size(14, 13);
             this.labelClose.TabIndex = 29;
             this.labelClose.Text = "X";
             this.labelClose.Click += new System.EventHandler(this.LabelClose_Click);
             // 
             // kryptonLabel3
             // 
-            this.kryptonLabel3.Location = new System.Drawing.Point(303, 60);
-            this.kryptonLabel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kryptonLabel3.Location = new System.Drawing.Point(230, 31);
+            this.kryptonLabel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.kryptonLabel3.Name = "kryptonLabel3";
-            this.kryptonLabel3.Size = new System.Drawing.Size(39, 26);
+            this.kryptonLabel3.Size = new System.Drawing.Size(32, 21);
             this.kryptonLabel3.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel3.TabIndex = 1;
             this.kryptonLabel3.Values.Text = "Tên";
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(303, 90);
-            this.txtName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtName.Location = new System.Drawing.Point(230, 55);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(251, 32);
+            this.txtName.Size = new System.Drawing.Size(188, 28);
             this.txtName.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -447,8 +447,7 @@ namespace StudentMng.Forms
             // 
             // AddStudent
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.Color.White;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.labelClose);
@@ -478,9 +477,9 @@ namespace StudentMng.Forms
             this.Controls.Add(this.txtMSSV);
             this.Controls.Add(this.lblStudent1);
             this.Controls.Add(this.lblTille);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "AddStudent";
-            this.Size = new System.Drawing.Size(571, 594);
+            this.Size = new System.Drawing.Size(430, 430);
             ((System.ComponentModel.ISupportInitialize)(this.cbbRank)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
