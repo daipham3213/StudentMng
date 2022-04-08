@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.Entity;
-using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
+using StudentMng.Models;
 
 namespace StudentMng.Persistence
 {
@@ -12,6 +11,14 @@ namespace StudentMng.Persistence
         protected override void Seed(AppDbContext context)
         {
             base.Seed(context);
+            User admin = new User
+            {
+                Username = "admin",
+                FullName = "Administrator",
+                Password = User.EncryptPassword("admin")
+            };
+            context.Users.Add(admin);
+            context.SaveChanges();
         }
     }
 }
