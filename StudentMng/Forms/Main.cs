@@ -11,7 +11,7 @@ namespace StudentMng.Forms
         private readonly Home _home;
         private readonly StudentList _studentList;
         private readonly Statistic _statisic;
-        private readonly AdminInfo _adminInfo;
+        //private readonly AdminInfo _adminInfo;
 
         public Main()
         {
@@ -20,7 +20,7 @@ namespace StudentMng.Forms
             _home = new Home();
             _studentList = new StudentList(_context);
             _statisic = new Statistic(_context);
-            _adminInfo = new AdminInfo(_context);
+            //_adminInfo = new AdminInfo(_context);
             
             pnlUC.Controls.Clear();
             pnlUC.Controls.Add(_studentList);
@@ -64,8 +64,8 @@ namespace StudentMng.Forms
         {
             pnlUC.Show();
             pnlUC.Controls.Clear();
-            pnlUC.Controls.Add(_adminInfo);
-            _adminInfo.BringToFront();
+            //pnlUC.Controls.Add(_adminInfo);
+            //_adminInfo.BringToFront();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)

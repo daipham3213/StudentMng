@@ -19,14 +19,14 @@ namespace StudentMng.UserControls
     {
         private BindingSource _source;
         private AppDbContext _context;
-        private readonly AddStudent _addStudent;
+        //private readonly AddStudent _addStudent;
 
 
         public StudentList(AppDbContext context)
         {
             InitializeComponent();
             _context = context;
-            _addStudent = new AddStudent(ClosePanel);
+            //_addStudent = new AddStudent(ClosePanel);
             pnlUC.Hide();
         }
 
@@ -107,12 +107,9 @@ namespace StudentMng.UserControls
 
         private void BtnAddStudent_Click(object sender, EventArgs e)
         {
-            pnlUC.Show();
-            if (!pnlUC.Contains(_addStudent))
-            {
-                pnlUC.Controls.Add(_addStudent);
-            }
-            _addStudent.BringToFront();
+            /*pnlUC.Show();
+            pnlUC.Controls.Add(_addStudent);
+            _addStudent.BringToFront();*/
         }
 
         private void TxtSearch_TextChanged(object sender, EventArgs e)
