@@ -6,7 +6,7 @@ using System.Windows.Forms;
 using StudentMng.Models;
 using StudentMng.Persistence;
 
-namespace StudentMng.Forms
+namespace StudentMng.UserControls
 {
     public partial class AddStudent : UserControl
     {
