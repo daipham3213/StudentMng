@@ -23,9 +23,7 @@ namespace StudentMng.Forms
                 if (context.Users.Any(u => u.Username.Equals(username)))
                 {
                     User user = context.Users.FirstOrDefault(u => u.Username == username);
-                    var sha = new SHA512CryptoServiceProvider();
-                    byte[] hash = sha.ComputeHash(Encoding.Default.GetBytes(password));
-                    if (Convert.ToBase64String(hash) == user.Password)
+                    if (User.EncryptPassword(password) == user.Password)
                     {
                         var main = new Main();
                         this.Hide();

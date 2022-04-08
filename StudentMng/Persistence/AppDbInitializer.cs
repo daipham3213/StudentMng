@@ -14,14 +14,9 @@ namespace StudentMng.Persistence
             User admin = new User
             {
                 Username = "admin",
-                FullName = "Administrator"
+                FullName = "Administrator",
+                Password = User.EncryptPassword("admin")
             };
-            using (var sha = new SHA512CryptoServiceProvider())
-            {
-                byte[] password = sha.ComputeHash(Encoding.Default.GetBytes("admin"));;
-                admin.Password = Convert.ToBase64String(password);
-            }
-
             context.Users.Add(admin);
             context.SaveChanges();
         }
