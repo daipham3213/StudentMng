@@ -67,5 +67,12 @@ namespace StudentMng.Forms
             pnlUC.Controls.Add(_adminInfo);
             _adminInfo.BringToFront();
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            var login = new Login();
+            login.Show();
+            this.Hide();
+        }
     }
 }

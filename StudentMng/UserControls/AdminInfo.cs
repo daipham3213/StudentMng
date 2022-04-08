@@ -100,6 +100,7 @@ namespace StudentMng.UserControls
                 txtConfirmPassword.Text = String.Empty;
                 txtNewPassword.Text = String.Empty;
                 txtCurrentPassword.Text = String.Empty;
+                cbxMatch.Visible = false;
             }
         }
 

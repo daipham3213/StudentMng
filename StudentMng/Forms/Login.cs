@@ -26,8 +26,8 @@ namespace StudentMng.Forms
                     if (User.EncryptPassword(password) == user.Password)
                     {
                         var main = new Main();
-                        this.Hide();
                         main.Show();
+                        this.Hide();
                     }
                     else
                     {
