@@ -95,6 +95,12 @@
     <Compile Include="UserControls\AddStudent.Designer.cs">
       <DependentUpon>AddStudent.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\AdminInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\AdminInfo.Designer.cs">
+      <DependentUpon>AdminInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Home.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -139,6 +145,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\AdminInfo.resx">
       <DependentUpon>AdminInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\AdminInfo.resx">
+      <DependentUpon>AdminInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Statistic.resx">
       <DependentUpon>Statistic.cs</DependentUpon>
