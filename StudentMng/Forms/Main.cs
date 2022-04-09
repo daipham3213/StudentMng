@@ -1,13 +1,6 @@
 ﻿using StudentMng.Persistence;
 using StudentMng.UserControls;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace StudentMng.Forms
@@ -18,6 +11,7 @@ namespace StudentMng.Forms
         private readonly Home _home;
         private readonly StudentList _studentList;
         private readonly Statistic _statisic;
+        private readonly AdminInfo _adminInfo;
 
         public Main()
         {
@@ -58,6 +52,14 @@ namespace StudentMng.Forms
             pnlUC.Controls.Add(_home);
 
             pnlUC.Show();
+        }
+
+        private void btnAccount_Click(object sender, EventArgs e)
+        {
+            pnlUC.Show();
+            pnlUC.Controls.Clear();
+            pnlUC.Controls.Add(_adminInfo);
+            _adminInfo.BringToFront();
         }
     }
 }

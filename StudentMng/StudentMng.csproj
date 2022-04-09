@@ -89,7 +89,9 @@
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Persistence\AppDbContext.cs" />
+    <Compile Include="Persistence\AppDbInitializer.cs" />
     <Compile Include="Persistence\EnumerableExtensions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -98,6 +100,12 @@
     </Compile>
     <Compile Include="UserControls\Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\AdminInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\AdminInfo.Designer.cs">
+      <DependentUpon>AdminInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Statistic.cs">
       <SubType>UserControl</SubType>
@@ -131,6 +139,9 @@
     </Compile>
     <EmbeddedResource Include="UserControls\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\AdminInfo.resx">
+      <DependentUpon>AdminInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Statistic.resx">
       <DependentUpon>Statistic.cs</DependentUpon>
