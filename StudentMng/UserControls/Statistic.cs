@@ -21,17 +21,13 @@ namespace StudentMng.UserControls
             _context = context;
         }
 
-        private void Statistic_Load(object sender, EventArgs e)
-        {
-            _source = new BindingSource();
-            dataGridViewStudents.DataSource = _source;
-        }
-
         public void LoadData()
         {
             cbbYearFilter.Items.Clear();
             cbbConditionFilter.Items.Clear();
             cbbCondition.SelectedItem = null;
+            _source = new BindingSource();
+            dataGridViewStudents.DataSource = _source;
 
             var yearFilter = _context.Students.Select(s => s.GraduationYear).Distinct().ToList();
             foreach(var year in yearFilter)
@@ -86,59 +82,41 @@ namespace StudentMng.UserControls
             }
         }
 
-        private void ClassFilter(string filter)
-        {
-            var students = _context.Students.Where(s => s.Class == filter).ToList();
-            _source.DataSource = EnumerableExtensions.ToDataTable(students);
-        }
-
-        private void DepartmentFilter(string filter)
-        {
-            var students = _context.Students.Where(s => s.Department == filter).ToList();
-            _source.DataSource = EnumerableExtensions.ToDataTable(students);
-        }
-
-        private void MajorsFilter(string filter)
-        {
-            var students = _context.Students.Where(s => s.Majors == filter).ToList();
-            _source.DataSource = EnumerableExtensions.ToDataTable(students);
-        }
-
-        private void btnYearFilter_Click(object sender, EventArgs e)
-        {
-            var year = cbbYearFilter.SelectedItem;
-            if (year == null)
-            {
-                MessageBox.Show("Chưa chọn năm", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            var students = _context.Students.Where(s => s.GraduationYear.ToString() == year.ToString()).ToList();
-            _source.DataSource = EnumerableExtensions.ToDataTable(students);
-        }
-
         private void btnConditionFilter_Click(object sender, EventArgs e)
         {
             var filter = cbbConditionFilter.SelectedItem;
-            if (filter == null)
+            var year = cbbYearFilter.SelectedItem;
+            if (filter == null && year == null)
             {
                 MessageBox.Show("Chưa chọn giá trị lọc", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            switch (cbbCondition.SelectedIndex)
+            var students = _context.Students.ToList();
+            if (year != null)
             {
-                case 0:
-                    ClassFilter(filter.ToString());
-                    break;
-                case 1:
-                    DepartmentFilter(filter.ToString());
-                    break;
-                case 2:
-                    MajorsFilter(filter.ToString());
-                    break;
-                default:
-                    break;
+                students = _context.Students.Where(s => s.GraduationYear.ToString() == year.ToString()).ToList();
             }
+
+            if (filter != null)
+            {
+                switch (cbbCondition.SelectedIndex)
+                {
+                    case 0:
+                        students = students.Where(s => s.Class == filter.ToString()).ToList();
+                        break;
+                    case 1:
+                        students = students.Where(s => s.Department == filter.ToString()).ToList();
+                        break;
+                    case 2:
+                        students = students.Where(s => s.Majors == filter.ToString()).ToList();
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+            _source.DataSource = EnumerableExtensions.ToDataTable(students);
         }
     }
 }

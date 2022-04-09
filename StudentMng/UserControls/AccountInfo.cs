@@ -1,41 +1,48 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity.Migrations;
-using System.Linq;
-using System.Windows.Forms;
-using StudentMng.Models;
+﻿using StudentMng.Models;
 using StudentMng.Persistence;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Data.Entity.Migrations;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace StudentMng.UserControls
 {
-    public partial class AdminInfo : UserControl
+    public partial class AccountInfo : UserControl
     {
         private readonly AppDbContext _context;
-        private readonly BindingSource _source;
         private User _user;
 
-        public AdminInfo(AppDbContext context)
+        public AccountInfo(AppDbContext context)
         {
             InitializeComponent();
-            _source = new BindingSource();
             _context = context;
         }
 
-        private void AdminInfo_Load(object sender, EventArgs e)
+        public void LoadData(string username)
         {
-            var users = _context.Users.ToList();
-            dataGridViewStudents.DataSource = EnumerableExtensions.ToDataTable(users);
+            _user = _context.Users.FirstOrDefault(u => u.Username == username);
+
+            if (_user != null)
+            {
+                txtFullname.Text = _user.FullName;
+                txtUsername.Text = _user.Username;
+            }
         }
 
-        private void btnChangePassword_Click(object sender, EventArgs e)
+        private void txtUsername_TextChanged(object sender, EventArgs e)
         {
-            var currentRow = dataGridViewStudents.CurrentRow;
-            if (currentRow != null)
-            {
-                int id = int.Parse(currentRow.Cells[0].Value.ToString());
-                _user = _context.Users.FirstOrDefault(u => u.Id == id);
-                panelChangePasswowrd.Visible = true;
-            }
+            btnUpdate.Enabled = txtUsername.Text.Length > 0 && !txtUsername.Text.Equals(_user.Username);
+        }
+
+        private void txtFullname_TextChanged(object sender, EventArgs e)
+        {
+            btnUpdate.Enabled = txtFullname.Text.Length > 0 && !txtFullname.Text.Equals(_user.FullName);
         }
 
         private void txtNewPassword_TextChanged(object sender, EventArgs e)
@@ -48,11 +55,11 @@ namespace StudentMng.UserControls
                 if (User.EncryptPassword(newPassword).Equals(_user.Password)) errors.Add("Không thể đặt trùng mật khẩu cũ");
                 if (newPassword.Length < 8) errors.Add("Mật khẩu quá ngắn");
                 if (txtConfirmPassword.Text.Length > 0) cbxMatch.Checked = txtConfirmPassword.Text.Equals(txtNewPassword.Text);
-                bnConfirm.Enabled = errors.Count <= 0;
+                btnChangePassword.Enabled = errors.Count <= 0;
             }
             else
             {
-                bnConfirm.Enabled = false;
+                btnChangePassword.Enabled = false;
             }
 
             if (errors.Count > 0)
@@ -71,7 +78,7 @@ namespace StudentMng.UserControls
         {
             cbxMatch.Visible = txtNewPassword.Text.Length > 0;
             cbxMatch.Checked = txtConfirmPassword.Text.Equals(txtNewPassword.Text);
-            bnConfirm.Enabled = cbxMatch.Checked && cbxStrength.Checked;
+            btnChangePassword.Enabled = cbxMatch.Checked && cbxStrength.Checked;
             if (!txtConfirmPassword.Text.Equals(txtNewPassword.Text))
             {
                 cbxMatch.Text = "Xác nhận mật khẩu sai";
@@ -82,7 +89,7 @@ namespace StudentMng.UserControls
             }
         }
 
-        private void bnConfirm_Click(object sender, EventArgs e)
+        private void btnChangePassword_Click(object sender, EventArgs e)
         {
             if (cbxMatch.Checked && cbxStrength.Checked)
             {
@@ -97,19 +104,21 @@ namespace StudentMng.UserControls
                 cbxMatch.Visible = false;
                 cbxMatch.Visible = false;
             }
-
         }
 
-        private void labelClosePanel_Click(object sender, EventArgs e)
+        private void btnUpdate_Click(object sender, EventArgs e)
         {
-            panelChangePasswowrd.Hide();
-            txtConfirmPassword.Clear();
-            txtNewPassword.Clear();
-        }
+            if (btnUpdate.Enabled)
+            {
+                _user.FullName = txtFullname.Text;
+                _user.Username = txtUsername.Text;
+                _context.Users.AddOrUpdate(_user);
+                _context.SaveChanges();
+                MessageBox.Show("Đổi thông tin thành công", "Thành công", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
 
-        public void CloseChangePassword()
-        {
-            panelChangePasswowrd.Hide();
+                btnUpdate.Enabled = false;
+            }
         }
     }
 }

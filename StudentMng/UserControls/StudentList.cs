@@ -21,7 +21,6 @@ namespace StudentMng.UserControls
         private AppDbContext _context;
         private readonly AddStudent _addStudent;
 
-
         public StudentList(AppDbContext context)
         {
             InitializeComponent();

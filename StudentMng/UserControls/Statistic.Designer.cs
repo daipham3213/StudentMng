@@ -404,7 +404,6 @@ namespace StudentMng.UserControls
             this.btnYearFilter.StateTracking.Border.Width = 1;
             this.btnYearFilter.TabIndex = 15;
             this.btnYearFilter.Values.Text = "Lọc";
-            this.btnYearFilter.Click += new System.EventHandler(this.btnYearFilter_Click);
             // 
             // btnConditionFilter
             // 
@@ -494,7 +493,6 @@ namespace StudentMng.UserControls
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Statistic";
             this.Size = new System.Drawing.Size(1400, 800);
-            this.Load += new System.EventHandler(this.Statistic_Load);
             ((System.ComponentModel.ISupportInitialize)(this.cbbYearFilter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbCondition)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbConditionFilter)).EndInit();

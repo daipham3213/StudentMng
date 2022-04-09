@@ -70,6 +70,12 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UserControls\AccountInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\AccountInfo.Designer.cs">
+      <DependentUpon>AccountInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\AddStudent.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -119,6 +125,9 @@
     <Compile Include="UserControls\StudentList.Designer.cs">
       <DependentUpon>StudentList.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserControls\AccountInfo.resx">
+      <DependentUpon>AccountInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\AddStudent.resx">
       <DependentUpon>AddStudent.cs</DependentUpon>
     </EmbeddedResource>

@@ -11,6 +11,8 @@ namespace StudentMng.Forms
 {
     public partial class Login : Form
     {
+        private readonly string username = "admin";
+        private readonly string password = "admin";
         public Login()
         {
             InitializeComponent();
@@ -25,11 +27,7 @@ namespace StudentMng.Forms
                     User user = context.Users.FirstOrDefault(u => u.Username == username);
                     if (User.EncryptPassword(password) == user.Password)
                     {
-                        txtUsername.Clear();
-                        txtPassword.Clear();
-                        var main = new Main(this);
-                        this.Hide();
-                        main.Show();
+                        ShowMain(user.Username);
                     }
                     else
                     {
@@ -62,7 +60,31 @@ namespace StudentMng.Forms
                 return;
             }
 
-            Authenticate(usr, pwd);
+            if (usr == username)
+            {
+                if (pwd == password)
+                {
+                    ShowMain(usr);
+                } else
+                {
+                    MessageBox.Show(@"Sai thông tin đăng nhập!", @"Lỗi đăng nhập", MessageBoxButtons.OK,
+                            MessageBoxIcon.Stop);
+                    return;
+                }
+            }
+            else
+            {
+                Authenticate(usr, pwd);
+            }
+        }
+
+        private void ShowMain(string usr)
+        {
+            txtUsername.Clear();
+            txtPassword.Clear();
+            var main = new Main(this, usr);
+            this.Hide();
+            main.Show();
         }
 
         private void Close(object sender, EventArgs e)
