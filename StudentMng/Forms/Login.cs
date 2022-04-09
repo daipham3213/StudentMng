@@ -25,7 +25,9 @@ namespace StudentMng.Forms
                     User user = context.Users.FirstOrDefault(u => u.Username == username);
                     if (User.EncryptPassword(password) == user.Password)
                     {
-                        var main = new Main();
+                        txtUsername.Clear();
+                        txtPassword.Clear();
+                        var main = new Main(this);
                         this.Hide();
                         main.Show();
                     }

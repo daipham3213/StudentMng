@@ -30,18 +30,12 @@ namespace StudentMng.UserControls
 
         private void txtUsername_TextChanged(object sender, EventArgs e)
         {
-            if (txtUsername.Text.Length > 0 && !txtUsername.Text.Equals(_user.Username))
-            {
-                btnUpdate.Enabled = true;
-            }
+            btnUpdate.Enabled = txtUsername.Text.Length > 0 && !txtUsername.Text.Equals(_user.Username);
         }
 
         private void txtFullname_TextChanged(object sender, EventArgs e)
         {
-            if (txtFullname.Text.Length > 0 && !txtFullname.Text.Equals(_user.FullName))
-            {
-                btnUpdate.Enabled = true;
-            }
+            btnUpdate.Enabled = txtFullname.Text.Length > 0 && !txtFullname.Text.Equals(_user.FullName);
         }
 
         private void txtNewPassword_TextChanged(object sender, EventArgs e)
@@ -69,7 +63,7 @@ namespace StudentMng.UserControls
             else
             {
                 cbxStrength.Checked = true;
-                cbxStrength.Text = String.Empty;
+                cbxStrength.Text = string.Empty;
             }
         }
 
@@ -84,7 +78,7 @@ namespace StudentMng.UserControls
             }
             else
             {
-                cbxMatch.Text = String.Empty;
+                cbxMatch.Text = string.Empty;
             }
         }
 
@@ -97,9 +91,11 @@ namespace StudentMng.UserControls
                 _context.SaveChanges();
                 MessageBox.Show("Đổi mật khẩu thành công", "Thành công", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
-                txtConfirmPassword.Text = String.Empty;
-                txtNewPassword.Text = String.Empty;
-                txtCurrentPassword.Text = String.Empty;
+                txtConfirmPassword.Text = string.Empty;
+                txtNewPassword.Text = string.Empty;
+
+                cbxMatch.Visible = false;
+                cbxMatch.Visible = false;
             }
         }
 
@@ -113,6 +109,8 @@ namespace StudentMng.UserControls
                 _context.SaveChanges();
                 MessageBox.Show("Đổi thông tin thành công", "Thành công", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
+
+                btnUpdate.Enabled = false;
             }
         }
     }

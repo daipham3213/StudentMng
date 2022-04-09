@@ -12,14 +12,17 @@ namespace StudentMng.Forms
         private readonly StudentList _studentList;
         private readonly Statistic _statisic;
         private readonly AdminInfo _adminInfo;
+        private Login _login;
 
-        public Main()
+        public Main(Login login)
         {
             InitializeComponent();
             _context = new AppDbContext();
             _home = new Home();
             _studentList = new StudentList(_context);
             _statisic = new Statistic(_context);
+            _adminInfo = new AdminInfo(_context);
+            _login = login;
 
             pnlUC.Hide();
         }
@@ -60,6 +63,12 @@ namespace StudentMng.Forms
             pnlUC.Controls.Clear();
             pnlUC.Controls.Add(_adminInfo);
             _adminInfo.BringToFront();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            _login.Show();
+            this.Close();
         }
     }
 }
