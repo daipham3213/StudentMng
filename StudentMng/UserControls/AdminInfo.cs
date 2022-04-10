@@ -12,29 +12,33 @@ namespace StudentMng.UserControls
     {
         private readonly AppDbContext _context;
         private readonly BindingSource _source;
+        private readonly AddAccount _addAccount;
         private User _user;
 
         public AdminInfo(AppDbContext context)
         {
             InitializeComponent();
             _source = new BindingSource();
+            _addAccount = new AddAccount(ClosePanel);
+            panelAddAcount.Controls.Add(_addAccount);
             _context = context;
         }
 
         private void AdminInfo_Load(object sender, EventArgs e)
         {
             var users = _context.Users.ToList();
-            dataGridViewStudents.DataSource = EnumerableExtensions.ToDataTable(users);
+            dataGridViewAccounts.DataSource = EnumerableExtensions.ToDataTable(users);
         }
 
         private void btnChangePassword_Click(object sender, EventArgs e)
         {
-            var currentRow = dataGridViewStudents.CurrentRow;
+            var currentRow = dataGridViewAccounts.CurrentRow;
             if (currentRow != null)
             {
                 int id = int.Parse(currentRow.Cells[0].Value.ToString());
                 _user = _context.Users.FirstOrDefault(u => u.Id == id);
-                panelChangePasswowrd.Visible = true;
+                panelChangePassword.Visible = true;
+                panelChangePassword.BringToFront();
             }
         }
 
@@ -102,14 +106,82 @@ namespace StudentMng.UserControls
 
         private void labelClosePanel_Click(object sender, EventArgs e)
         {
-            panelChangePasswowrd.Hide();
+            panelChangePassword.Hide();
             txtConfirmPassword.Clear();
             txtNewPassword.Clear();
         }
 
         public void CloseChangePassword()
         {
-            panelChangePasswowrd.Hide();
+            panelChangePassword.Hide();
+        }
+
+        private void btnAddAccount_Click(object sender, EventArgs e)
+        {
+            panelAddAcount.Show();
+            panelAddAcount.BringToFront();
+        }
+
+        private bool ClosePanel()
+        {
+            panelAddAcount.Hide();
+            var users = _context.Users.ToList();
+            dataGridViewAccounts.DataSource = EnumerableExtensions.ToDataTable(users);
+            return true;
+        }
+
+        private void dataGridViewStudents_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            var isAddable = IsAddable(e.RowIndex, e.ColumnIndex);
+            if (string.IsNullOrEmpty(isAddable))
+            {
+                var id = int.Parse(dataGridViewAccounts[e.ColumnIndex, e.RowIndex].OwningRow.Cells[0].Value.ToString());
+                var dataPropertyName = dataGridViewAccounts[e.ColumnIndex, e.RowIndex].OwningColumn.DataPropertyName;
+                var value = dataGridViewAccounts[e.ColumnIndex, e.RowIndex].Value.ToString();
+
+                User user = _context.Users.FirstOrDefault(u => u.Id == id);
+                foreach (var prop in user.GetType().GetProperties())
+                {
+                    if (prop.Name == dataPropertyName)
+                    {
+                        user
+                            .GetType()
+                            .GetProperty(dataPropertyName)
+                            .SetValue(user, Convert.ChangeType(value, prop.PropertyType), null);
+                    }
+                }
+
+                _context.Users.AddOrUpdate(user);
+                _context.SaveChanges();
+
+                var users = _context.Users.ToList();
+                dataGridViewAccounts.DataSource = EnumerableExtensions.ToDataTable(users);
+            } else
+            {
+                MessageBox.Show(isAddable, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                dataGridViewAccounts[e.ColumnIndex, e.RowIndex].Value = dataGridViewAccounts.Tag;
+            }
+        }
+
+        private string IsAddable(int row, int col)
+        {
+            var value = dataGridViewAccounts[col, row].Value.ToString();
+            if (string.IsNullOrEmpty(value))
+                return "Không được để trống ô";
+
+
+            if (dataGridViewAccounts.Columns[col].DataPropertyName == "Username")
+            {
+                if (_context.Users.Any(s => s.Username == value))
+                    return "Tên tài khoản đã tồn tại";
+            }
+
+            return "";
+        }
+
+        private void dataGridViewStudents_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
+        {
+            dataGridViewAccounts.Tag = dataGridViewAccounts.CurrentCell.Value;
         }
     }
 }

@@ -90,7 +90,6 @@ namespace StudentMng.UserControls
 
             if (dataGridViewStudents.Columns[col].DataPropertyName == "StudentId")
             {
-                var id = int.Parse(value);
                 if (_context.Students.Any(s => s.StudentId == value))
                     return "Mã số sinh viên đã tồn tại";
             }
