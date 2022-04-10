@@ -29,19 +29,19 @@ namespace StudentMng.UserControls
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbYearFilter = new System.Windows.Forms.Label();
             this.cbbYearFilter = new Krypton.Toolkit.KryptonComboBox();
             this.lbConditionFilter = new System.Windows.Forms.Label();
@@ -62,7 +62,6 @@ namespace StudentMng.UserControls
             this.GraduationYearColumn = new Krypton.Toolkit.KryptonDataGridViewTextBoxColumn();
             this.RankColumn = new Krypton.Toolkit.KryptonDataGridViewTextBoxColumn();
             this.CurrentJobColumn = new Krypton.Toolkit.KryptonDataGridViewTextBoxColumn();
-            this.btnYearFilter = new Krypton.Toolkit.KryptonButton();
             this.btnConditionFilter = new Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.cbbYearFilter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbCondition)).BeginInit();
@@ -204,7 +203,7 @@ namespace StudentMng.UserControls
             // IdColumn
             // 
             this.IdColumn.DataPropertyName = "Id";
-            this.IdColumn.DefaultCellStyle = dataGridViewCellStyle14;
+            this.IdColumn.DefaultCellStyle = dataGridViewCellStyle1;
             this.IdColumn.HeaderText = "Id";
             this.IdColumn.Name = "IdColumn";
             this.IdColumn.ReadOnly = true;
@@ -214,8 +213,8 @@ namespace StudentMng.UserControls
             // StudentIdColumn
             // 
             this.StudentIdColumn.DataPropertyName = "StudentId";
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.StudentIdColumn.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.StudentIdColumn.DefaultCellStyle = dataGridViewCellStyle2;
             this.StudentIdColumn.HeaderText = "MSSV";
             this.StudentIdColumn.Name = "StudentIdColumn";
             this.StudentIdColumn.ReadOnly = true;
@@ -224,8 +223,8 @@ namespace StudentMng.UserControls
             // NameColumn
             // 
             this.NameColumn.DataPropertyName = "Name";
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.NameColumn.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.NameColumn.DefaultCellStyle = dataGridViewCellStyle3;
             this.NameColumn.HeaderText = "Họ Tên";
             this.NameColumn.Name = "NameColumn";
             this.NameColumn.ReadOnly = true;
@@ -236,8 +235,8 @@ namespace StudentMng.UserControls
             this.BirthdateColumn.CalendarTodayDate = new System.DateTime(2022, 4, 8, 0, 0, 0, 0);
             this.BirthdateColumn.Checked = false;
             this.BirthdateColumn.DataPropertyName = "Birthdate";
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.BirthdateColumn.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.BirthdateColumn.DefaultCellStyle = dataGridViewCellStyle4;
             this.BirthdateColumn.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.BirthdateColumn.HeaderText = "Ngày sinh";
             this.BirthdateColumn.Name = "BirthdateColumn";
@@ -247,8 +246,8 @@ namespace StudentMng.UserControls
             // HometownColumn
             // 
             this.HometownColumn.DataPropertyName = "Hometown";
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.HometownColumn.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.HometownColumn.DefaultCellStyle = dataGridViewCellStyle5;
             this.HometownColumn.HeaderText = "Quê quán";
             this.HometownColumn.Name = "HometownColumn";
             this.HometownColumn.ReadOnly = true;
@@ -257,8 +256,8 @@ namespace StudentMng.UserControls
             // AddressColumn
             // 
             this.AddressColumn.DataPropertyName = "Address";
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.AddressColumn.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.AddressColumn.DefaultCellStyle = dataGridViewCellStyle6;
             this.AddressColumn.HeaderText = "Địa chỉ";
             this.AddressColumn.Name = "AddressColumn";
             this.AddressColumn.ReadOnly = true;
@@ -267,8 +266,8 @@ namespace StudentMng.UserControls
             // PhoneNumberColumn
             // 
             this.PhoneNumberColumn.DataPropertyName = "PhoneNumber";
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.PhoneNumberColumn.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.PhoneNumberColumn.DefaultCellStyle = dataGridViewCellStyle7;
             this.PhoneNumberColumn.HeaderText = "SĐT";
             this.PhoneNumberColumn.Name = "PhoneNumberColumn";
             this.PhoneNumberColumn.ReadOnly = true;
@@ -277,8 +276,8 @@ namespace StudentMng.UserControls
             // DepartmentColumn
             // 
             this.DepartmentColumn.DataPropertyName = "Department";
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.DepartmentColumn.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.DepartmentColumn.DefaultCellStyle = dataGridViewCellStyle8;
             this.DepartmentColumn.HeaderText = "Khoa";
             this.DepartmentColumn.Name = "DepartmentColumn";
             this.DepartmentColumn.ReadOnly = true;
@@ -287,8 +286,8 @@ namespace StudentMng.UserControls
             // MajorsColumn
             // 
             this.MajorsColumn.DataPropertyName = "Majors";
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.MajorsColumn.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.MajorsColumn.DefaultCellStyle = dataGridViewCellStyle9;
             this.MajorsColumn.HeaderText = "Ngành";
             this.MajorsColumn.Name = "MajorsColumn";
             this.MajorsColumn.ReadOnly = true;
@@ -297,8 +296,8 @@ namespace StudentMng.UserControls
             // ClassColumn
             // 
             this.ClassColumn.DataPropertyName = "Class";
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.ClassColumn.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ClassColumn.DefaultCellStyle = dataGridViewCellStyle10;
             this.ClassColumn.HeaderText = "Lớp";
             this.ClassColumn.Name = "ClassColumn";
             this.ClassColumn.ReadOnly = true;
@@ -307,8 +306,8 @@ namespace StudentMng.UserControls
             // GraduationYearColumn
             // 
             this.GraduationYearColumn.DataPropertyName = "GraduationYear";
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.GraduationYearColumn.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.GraduationYearColumn.DefaultCellStyle = dataGridViewCellStyle11;
             this.GraduationYearColumn.HeaderText = "Năm tốt nghiệp";
             this.GraduationYearColumn.Name = "GraduationYearColumn";
             this.GraduationYearColumn.ReadOnly = true;
@@ -317,8 +316,8 @@ namespace StudentMng.UserControls
             // RankColumn
             // 
             this.RankColumn.DataPropertyName = "Rank";
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.RankColumn.DefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.RankColumn.DefaultCellStyle = dataGridViewCellStyle12;
             this.RankColumn.HeaderText = "Xếp loại";
             this.RankColumn.Name = "RankColumn";
             this.RankColumn.ReadOnly = true;
@@ -327,83 +326,12 @@ namespace StudentMng.UserControls
             // CurrentJobColumn
             // 
             this.CurrentJobColumn.DataPropertyName = "CurrentJob";
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.CurrentJobColumn.DefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.CurrentJobColumn.DefaultCellStyle = dataGridViewCellStyle13;
             this.CurrentJobColumn.HeaderText = "Công việc hiện tại";
             this.CurrentJobColumn.Name = "CurrentJobColumn";
             this.CurrentJobColumn.ReadOnly = true;
             this.CurrentJobColumn.Width = 150;
-            // 
-            // btnYearFilter
-            // 
-            this.btnYearFilter.Location = new System.Drawing.Point(359, 12);
-            this.btnYearFilter.Margin = new System.Windows.Forms.Padding(2);
-            this.btnYearFilter.Name = "btnYearFilter";
-            this.btnYearFilter.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
-            this.btnYearFilter.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
-            this.btnYearFilter.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
-            this.btnYearFilter.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
-            this.btnYearFilter.OverrideDefault.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnYearFilter.OverrideDefault.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.btnYearFilter.OverrideDefault.Border.Rounding = 6F;
-            this.btnYearFilter.OverrideDefault.Border.Width = 1;
-            this.btnYearFilter.OverrideFocus.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
-            this.btnYearFilter.OverrideFocus.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
-            this.btnYearFilter.OverrideFocus.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
-            this.btnYearFilter.OverrideFocus.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
-            this.btnYearFilter.OverrideFocus.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnYearFilter.OverrideFocus.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.btnYearFilter.OverrideFocus.Border.Rounding = 6F;
-            this.btnYearFilter.OverrideFocus.Border.Width = 1;
-            this.btnYearFilter.Size = new System.Drawing.Size(61, 32);
-            this.btnYearFilter.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
-            this.btnYearFilter.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
-            this.btnYearFilter.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
-            this.btnYearFilter.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
-            this.btnYearFilter.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnYearFilter.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.btnYearFilter.StateCommon.Border.Rounding = 6F;
-            this.btnYearFilter.StateCommon.Border.Width = 1;
-            this.btnYearFilter.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.btnYearFilter.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnYearFilter.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
-            this.btnYearFilter.StateNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
-            this.btnYearFilter.StateNormal.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
-            this.btnYearFilter.StateNormal.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
-            this.btnYearFilter.StateNormal.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnYearFilter.StateNormal.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.btnYearFilter.StateNormal.Border.Rounding = 6F;
-            this.btnYearFilter.StateNormal.Border.Width = 1;
-            this.btnYearFilter.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
-            this.btnYearFilter.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
-            this.btnYearFilter.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
-            this.btnYearFilter.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
-            this.btnYearFilter.StatePressed.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnYearFilter.StatePressed.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.btnYearFilter.StatePressed.Border.Rounding = 6F;
-            this.btnYearFilter.StatePressed.Border.Width = 1;
-            this.btnYearFilter.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
-            this.btnYearFilter.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
-            this.btnYearFilter.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
-            this.btnYearFilter.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
-            this.btnYearFilter.StateTracking.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnYearFilter.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.btnYearFilter.StateTracking.Border.Rounding = 6F;
-            this.btnYearFilter.StateTracking.Border.Width = 1;
-            this.btnYearFilter.TabIndex = 15;
-            this.btnYearFilter.Values.Text = "Lọc";
             // 
             // btnConditionFilter
             // 
@@ -482,7 +410,6 @@ namespace StudentMng.UserControls
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.btnConditionFilter);
-            this.Controls.Add(this.btnYearFilter);
             this.Controls.Add(this.panelListStudent);
             this.Controls.Add(this.cbbConditionFilter);
             this.Controls.Add(this.cbbCondition);
@@ -525,7 +452,6 @@ namespace StudentMng.UserControls
         private Krypton.Toolkit.KryptonDataGridViewTextBoxColumn GraduationYearColumn;
         private Krypton.Toolkit.KryptonDataGridViewTextBoxColumn RankColumn;
         private Krypton.Toolkit.KryptonDataGridViewTextBoxColumn CurrentJobColumn;
-        private Krypton.Toolkit.KryptonButton btnYearFilter;
         private Krypton.Toolkit.KryptonButton btnConditionFilter;
     }
 }
